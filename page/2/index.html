@@ -1,0 +1,2273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1d1d1f" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/favicon.ico" color="#ffffff">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=-apple-system:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=BlinkMacSystemFont:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family='Segoe+UI':ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family='Helvetica+Neue':ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Arial:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=sans-serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family='PingFang+SC':ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family='Microsoft+YaHei':ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family='JetBrains+Mono':ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family='Fira+Code':ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Consolas:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Monaco:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=monospace:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/#6366f1/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous" defer></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"your-domain.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.28.0","exturl":true,"sidebar":{"position":"left","width_expanded":300,"width_dual_column":240,"display":"post","padding":20,"offset":12,"onmobile":"push"},"hljswrap":true,"codeblock":{"theme":{"light":"github","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":600},"language":true},"bookmark":{"enable":true,"color":"#6366f1","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeInUp","post_header":"fadeInDown","post_body":"fadeIn","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":3,"unescape":false,"preload":true,"trigger":"auto"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="一个专注于技术分享与生活记录的个人博客，涵盖前端开发、后端技术、编程经验、工具推荐等内容">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mr Jia&#39;s Blog">
+<meta property="og:url" content="https://your-domain.com/page/2/">
+<meta property="og:site_name" content="Mr Jia&#39;s Blog">
+<meta property="og:description" content="一个专注于技术分享与生活记录的个人博客，涵盖前端开发、后端技术、编程经验、工具推荐等内容">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Mr Jia">
+<meta property="article:tag" content="博客,技术博客,前端开发,编程,JavaScript,Python,生活记录">
+<meta name="twitter:card" content="summary_large_image">
+
+
+<link rel="canonical" href="https://your-domain.com/page/2/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"page/2/index.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Mr Jia's Blog - 记录生活，分享技术</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.1.0/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/7.2.0/pangu.umd.js" integrity="sha256-JnmRRnJK7DC6RQJbAJb6AXOM9OmWzS6z8eYultk/48Y=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.10.1/mermaid.min.js","integrity":"sha256-BmQmdWDS8X2OTbrwELWK366LV6escyWhHHe0XCTU/Hk="}}</script>
+  <script src="/js/third-party/tags/mermaid.js" defer></script>
+
+
+
+  <script src="/js/third-party/pace.js" defer></script>
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="/js/third-party/math/katex.js" defer></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/3.0.1/quicklink.umd.js" integrity="sha256-44BednzIpUeQJcY8qtLyarFu0UCCTbgmWOvaoehiFQQ=" crossorigin="anonymous" defer></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":[],"url":"https://your-domain.com/page/2/"}</script>
+  <script src="/js/third-party/quicklink.js" defer></script>
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+
+
+<meta name="theme-color" content="#6366f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1d1d1f" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="format-detection" content="telephone=no">
+
+
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+
+<link rel="alternate" href="/atom.xml" title="Mr Jia's Blog" type="application/atom+xml">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Mr Jia's Blog",
+  "description": "记录生活，分享技术",
+  "url": "https://your-domain.com",
+  "author": {
+    "@type": "Person",
+    "name": "Mr Jia",
+    "url": "https://github.com/jzl00"
+  }
+}
+</script>
+
+
+<script>
+  (function() {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      document.documentElement.classList.add('dark');
+    }
+  })();
+</script>
+
+<style>
+  /* 页面加载动画 */
+  .page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+  .page-loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .loader-content {
+    text-align: center;
+    color: white;
+  }
+  .loader-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+  }
+  .loader-text {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    opacity: 0.9;
+  }
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+</style>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Mr Jia's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">记录生活，分享技术</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fas fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fas fa-archive fa-fw"></i>归档<span class="badge">16</span></a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fas fa-tags fa-fw"></i>标签<span class="badge">31</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fas fa-folder-open fa-fw"></i>分类<span class="badge">2</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fas fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Mr Jia"
+      src="/images/avatar.svg">
+  <p class="site-author-name" itemprop="name">Mr Jia</p>
+  <div class="site-description" itemprop="description">一个专注于技术分享与生活记录的个人博客，涵盖前端开发、后端技术、编程经验、工具推荐等内容</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2p6bDAw" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jzl00"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjMyNjQwMzg3MkBxcS5jb20=" title="E-Mail → mailto:326403872@qq.com"><i class="fas fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvIHx8IEhleG/lrpjnvZE=" title="https:&#x2F;&#x2F;hexo.io || Hexo官网">Hexo</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZyB8fCBOZXhU5Li76aKY" title="https:&#x2F;&#x2F;theme-next.js.org || NexT主题">NexT</span>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://your-domain.com/posts/25731/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.svg">
+      <meta itemprop="name" content="Mr Jia">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr Jia's Blog">
+      <meta itemprop="description" content="一个专注于技术分享与生活记录的个人博客，涵盖前端开发、后端技术、编程经验、工具推荐等内容">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Mr Jia's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/25731/" class="post-title-link" itemprop="url">Vue3 基础教程（选项式 API）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-07-16 15:40:00 / 修改时间：10:03:49" itemprop="dateCreated datePublished" datetime="2026-07-16T15:40:00+08:00">2026-07-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">前端开发</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Vue-介绍"><a href="#Vue-介绍" class="headerlink" title="Vue 介绍"></a>Vue 介绍</h2><p><strong>渐进式框架</strong>：可以用最简单的方式直接导入 vue.js 使用，随着项目变大，可以逐步集成周边插件。</p>
+<ul>
+<li><strong>版本</strong>：Vue 3</li>
+<li><strong>学习方式</strong>：选项式 API</li>
+<li><strong>官网</strong>：<span class="exturl" data-url="aHR0cHM6Ly9jbi52dWVqcy5vcmcv">https://cn.vuejs.org/<i class="fa fa-external-link-alt"></i></span></li>
+<li><strong>CDN 地址</strong>：<span class="exturl" data-url="aHR0cHM6Ly91bnBrZy5jb20vdnVlQDMvZGlzdC92dWUuZ2xvYmFsLmpz">https://unpkg.com/vue@3/dist/vue.global.js<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<h2 id="Vue-接入步骤"><a href="#Vue-接入步骤" class="headerlink" title="Vue 接入步骤"></a>Vue 接入步骤</h2><ol>
+<li>下载 vue.js 文件</li>
+<li>在 html 中引入</li>
+<li>创建 Vue 实例</li>
+<li>挂载到页面元素</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// createApp：创建 vue 实例</span></span><br><span class="line"><span class="comment">// mount：挂载到指定元素</span></span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">createApp</span>(&#123; <span class="comment">/* 选项 */</span> &#125;).<span class="title function_">mount</span>(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="模板语法"><a href="#模板语法" class="headerlink" title="模板语法"></a>模板语法</h2><h3 id="双大括号插值"><a href="#双大括号插值" class="headerlink" title="双大括号插值"></a>双大括号插值</h3><p><code>&#123;&#123; 表达式 &#125;&#125;</code> - 可以写 JS 表达式，能取到 data 中的数据</p>
+<h3 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h3><table>
+<thead>
+<tr>
+<th>指令</th>
+<th>作用</th>
+<th>简写</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>v-text</code></td>
+<td>渲染纯文本，不解析标签</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>v-html</code></td>
+<td>渲染 HTML，解析标签</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>v-bind</code></td>
+<td>绑定属性</td>
+<td><code>:</code></td>
+</tr>
+<tr>
+<td><code>v-on</code></td>
+<td>绑定事件</td>
+<td><code>@</code></td>
+</tr>
+<tr>
+<td><code>v-if</code></td>
+<td>条件渲染（添加&#x2F;移除）</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>v-for</code></td>
+<td>列表循环</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<p><strong>动态属性</strong>：<code>:[attr]=&quot;url&quot;</code> 可以动态绑定不同属性</p>
+<h2 id="响应式原理"><a href="#响应式原理" class="headerlink" title="响应式原理"></a>响应式原理</h2><ol>
+<li>虚拟 DOM 本质是一个 JS 对象</li>
+<li>数据改变先更新虚拟 DOM，不直接操作真实 DOM</li>
+<li>通过 <strong>DIFF 算法</strong> 比较新旧虚拟 DOM，只更新变化的部分</li>
+<li><code>nextTick</code> 在真实 DOM 更新后调用</li>
+</ol>
+<blockquote>
+<p>data 必须是函数返回对象：保证每个组件有独立的数据作用域，通过 Proxy 实现响应式</p>
+</blockquote>
+<h2 id="计算属性-computed"><a href="#计算属性-computed" class="headerlink" title="计算属性 (computed)"></a>计算属性 (computed)</h2><h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ol>
+<li>✅ 有缓存</li>
+<li>✅ 立即执行一次</li>
+<li>✅ 监听多个依赖，任一改变就重新计算</li>
+<li>✅ 必须有 return 返回值</li>
+<li>✅ 多个值影响一个值</li>
+</ol>
+<h3 id="可写计算属性"><a href="#可写计算属性" class="headerlink" title="可写计算属性"></a>可写计算属性</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">computed</span>: &#123;</span><br><span class="line">  <span class="attr">fullName</span>: &#123;</span><br><span class="line">    <span class="title function_">get</span>(<span class="params"></span>) &#123; <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">first</span> + <span class="variable language_">this</span>.<span class="property">last</span> &#125;,</span><br><span class="line">    <span class="title function_">set</span>(<span class="params">val</span>) &#123; <span class="comment">/* 修改计算属性 */</span> &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="侦听器-watch"><a href="#侦听器-watch" class="headerlink" title="侦听器 (watch)"></a>侦听器 (watch)</h2><h3 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h3><ol>
+<li>✅ 惰性：默认不立即执行</li>
+<li>✅ 无需返回值</li>
+<li>✅ 支持异步操作</li>
+<li>✅ 没有缓存</li>
+<li>✅ 监听一个值，影响多个值</li>
+</ol>
+<h3 id="watch-vs-computed-对比"><a href="#watch-vs-computed-对比" class="headerlink" title="watch vs computed 对比"></a>watch vs computed 对比</h3><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>computed</th>
+<th>watch</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>立即执行</td>
+<td>✅ 是</td>
+<td>❌ 否（惰性）</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>✅ 需要</td>
+<td>❌ 不需要</td>
+</tr>
+<tr>
+<td>异步</td>
+<td>❌ 不支持</td>
+<td>✅ 支持</td>
+</tr>
+<tr>
+<td>缓存</td>
+<td>✅ 有</td>
+<td>❌ 无</td>
+</tr>
+<tr>
+<td>监听数量</td>
+<td>多个值</td>
+<td>一个值</td>
+</tr>
+<tr>
+<td>场景</td>
+<td>多对一</td>
+<td>一对多</td>
+</tr>
+</tbody></table>
+<h2 id="Class-和-Style-绑定"><a href="#Class-和-Style-绑定" class="headerlink" title="Class 和 Style 绑定"></a>Class 和 Style 绑定</h2><h3 id="Class-绑定"><a href="#Class-绑定" class="headerlink" title="Class 绑定"></a>Class 绑定</h3><ul>
+<li><strong>字符串</strong>：<code>:class=&quot;className&quot;</code></li>
+<li><strong>对象</strong>：<code>:class=&quot;&#123; active: isActive &#125;&quot;</code> 布尔值控制</li>
+<li><strong>数组</strong>：<code>:class=&quot;[classA, classB]&quot;</code></li>
+</ul>
+<blockquote>
+<p>绑定的 class 会和原有的 class 合并</p>
+</blockquote>
+<h3 id="Style-绑定"><a href="#Style-绑定" class="headerlink" title="Style 绑定"></a>Style 绑定</h3><p>同样支持字符串、对象、数组三种方式</p>
+<h2 id="条件渲染"><a href="#条件渲染" class="headerlink" title="条件渲染"></a>条件渲染</h2><h3 id="v-if-v-else-if-v-else"><a href="#v-if-v-else-if-v-else" class="headerlink" title="v-if &#x2F; v-else-if &#x2F; v-else"></a>v-if &#x2F; v-else-if &#x2F; v-else</h3><ul>
+<li>条件成立才渲染，不成立直接移除</li>
+<li>具有惰性</li>
+<li>适合切换不频繁的场景</li>
+</ul>
+<h3 id="v-show"><a href="#v-show" class="headerlink" title="v-show"></a>v-show</h3><ul>
+<li>始终渲染，通过 CSS display 控制显示隐藏</li>
+<li>非惰性</li>
+<li>适合频繁切换的场景</li>
+</ul>
+<h2 id="列表渲染-v-for"><a href="#列表渲染-v-for" class="headerlink" title="列表渲染 v-for"></a>列表渲染 v-for</h2><h3 id="可遍历类型"><a href="#可遍历类型" class="headerlink" title="可遍历类型"></a>可遍历类型</h3><ul>
+<li><strong>数字</strong>：<code>v-for=&quot;num in 10&quot;</code> 从 1 开始</li>
+<li><strong>字符串</strong>：<code>v-for=&quot;str in &#39;你好&#39;&quot;</code> 逐个字符</li>
+<li><strong>数组</strong>：<code>v-for=&quot;(item, index) in arr&quot;</code></li>
+<li><strong>对象</strong>：<code>v-for=&quot;(value, key, index) in obj&quot;</code></li>
+</ul>
+<h3 id="key-属性"><a href="#key-属性" class="headerlink" title="key 属性"></a>key 属性</h3><p>使用 v-for 必须加 key，且唯一。帮助虚拟 DOM 正确识别元素位置，提升 diff 性能。</p>
+<h3 id="v-if-和-v-for-优先级"><a href="#v-if-和-v-for-优先级" class="headerlink" title="v-if 和 v-for 优先级"></a>v-if 和 v-for 优先级</h3><ul>
+<li>Vue 2：for 优先级高于 if</li>
+<li>Vue 3：if 优先级高于 for（条件不成立不循环）</li>
+</ul>
+<blockquote>
+<p>不推荐一起使用</p>
+</blockquote>
+<h2 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h2><h3 id="两种方式"><a href="#两种方式" class="headerlink" title="两种方式"></a>两种方式</h3><ul>
+<li><strong>内联</strong>：<code>@click=&quot;count++&quot;</code></li>
+<li><strong>方法</strong>：<code>@click=&quot;add&quot;</code></li>
+</ul>
+<h3 id="事件修饰符"><a href="#事件修饰符" class="headerlink" title="事件修饰符"></a>事件修饰符</h3><table>
+<thead>
+<tr>
+<th>修饰符</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>.stop</code></td>
+<td>阻止冒泡</td>
+</tr>
+<tr>
+<td><code>.prevent</code></td>
+<td>阻止默认行为</td>
+</tr>
+<tr>
+<td><code>.self</code></td>
+<td>只有点击自身才触发</td>
+</tr>
+<tr>
+<td><code>.capture</code></td>
+<td>捕获阶段触发</td>
+</tr>
+<tr>
+<td><code>.once</code></td>
+<td>只触发一次</td>
+</tr>
+<tr>
+<td><code>.passive</code></td>
+<td>提升移动端滚动性能</td>
+</tr>
+</tbody></table>
+<h3 id="键盘修饰符"><a href="#键盘修饰符" class="headerlink" title="键盘修饰符"></a>键盘修饰符</h3><p><code>.enter</code> <code>.tab</code> <code>.delete</code> <code>.esc</code> <code>.space</code> <code>.up</code> <code>.down</code> <code>.left</code> <code>.right</code></p>
+<h2 id="表单双向绑定-v-model"><a href="#表单双向绑定-v-model" class="headerlink" title="表单双向绑定 v-model"></a>表单双向绑定 v-model</h2><h3 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h3><table>
+<thead>
+<tr>
+<th>修饰符</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>.lazy</code></td>
+<td>change 事件时同步，而非 input</td>
+</tr>
+<tr>
+<td><code>.number</code></td>
+<td>自动转为数字类型</td>
+</tr>
+<tr>
+<td><code>.trim</code></td>
+<td>去除首尾空格</td>
+</tr>
+</tbody></table>
+<h2 id="生命周期（选项式-8-个）"><a href="#生命周期（选项式-8-个）" class="headerlink" title="生命周期（选项式 8 个）"></a>生命周期（选项式 8 个）</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">beforeCreate</span>()   <span class="comment">// 创建之前</span></span><br><span class="line"><span class="title function_">created</span>()        <span class="comment">// 创建完成 —— 可发请求</span></span><br><span class="line"><span class="title function_">beforeMount</span>()    <span class="comment">// 挂载之前</span></span><br><span class="line"><span class="title function_">mounted</span>()        <span class="comment">// 挂载完成 —— 推荐发请求</span></span><br><span class="line"><span class="title function_">beforeUpdate</span>()   <span class="comment">// 更新之前</span></span><br><span class="line"><span class="title function_">updated</span>()        <span class="comment">// 更新完成</span></span><br><span class="line"><span class="title function_">beforeUnmount</span>()  <span class="comment">// 卸载之前</span></span><br><span class="line"><span class="title function_">unmounted</span>()      <span class="comment">// 卸载完成 —— 清理定时器等</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>组合式 API 中 setup 替代 beforeCreate 和 created</p>
+</blockquote>
+<h2 id="ref-引用"><a href="#ref-引用" class="headerlink" title="ref 引用"></a>ref 引用</h2><ul>
+<li>标记 DOM 元素，方便操作原生 DOM</li>
+<li>标记组件，可获取组件实例</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ref</span>=<span class="string">&quot;myDiv&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">myDiv</span>  <span class="comment">// 获取元素</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><h3 id="局部组件注册"><a href="#局部组件注册" class="headerlink" title="局部组件注册"></a>局部组件注册</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 声明组件</span></span><br><span class="line"><span class="keyword">const</span> myCom = &#123;</span><br><span class="line">  <span class="attr">template</span>: <span class="string">`&lt;h1&gt;&#123;&#123;msg&#125;&#125;&lt;/h1&gt;`</span>,</span><br><span class="line">  <span class="title function_">data</span>(<span class="params"></span>) &#123; <span class="keyword">return</span> &#123; <span class="attr">msg</span>: <span class="string">&#x27;hello&#x27;</span> &#125; &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. 注册</span></span><br><span class="line"><span class="attr">components</span>: &#123; <span class="title class_">MyCom</span>: myCom &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3. 使用</span></span><br><span class="line">&lt;<span class="title class_">MyCom</span> /&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="全局组件注册"><a href="#全局组件注册" class="headerlink" title="全局组件注册"></a>全局组件注册</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app.<span class="title function_">component</span>(<span class="string">&#x27;my-button&#x27;</span>, &#123;</span><br><span class="line">  <span class="attr">template</span>: <span class="string">`&lt;button&gt;&#123;&#123;count&#125;&#125;&lt;/button&gt;`</span>,</span><br><span class="line">  <span class="title function_">data</span>(<span class="params"></span>) &#123; <span class="keyword">return</span> &#123; <span class="attr">count</span>: <span class="number">0</span> &#125; &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="组件命名方式"><a href="#组件命名方式" class="headerlink" title="组件命名方式"></a>组件命名方式</h3><ul>
+<li>大驼峰：<code>MyCom</code>（单文件常用）</li>
+<li>小驼峰：<code>myCom</code></li>
+<li>连接符：<code>my-com</code></li>
+<li>全小写：<code>mycom</code></li>
+</ul>
+<h3 id="模板解析注意"><a href="#模板解析注意" class="headerlink" title="模板解析注意"></a>模板解析注意</h3><p><code>&lt;ul&gt;</code> <code>&lt;ol&gt;</code> <code>&lt;table&gt;</code> <code>&lt;select&gt;</code> 内部有限制，可用 <code>is</code> 属性解决：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">tr</span> <span class="attr">is</span>=<span class="string">&quot;vue:row&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Props-父传子"><a href="#Props-父传子" class="headerlink" title="Props 父传子"></a>Props 父传子</h2><ol>
+<li>使用组件时传属性</li>
+<li>子组件 props 接收</li>
+<li>直接使用</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 父组件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">child</span> <span class="attr">:msg</span>=<span class="string">&quot;message&quot;</span> <span class="attr">:age</span>=<span class="string">&quot;18&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">child</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 子组件</span></span><br><span class="line"><span class="attr">props</span>: [<span class="string">&#x27;msg&#x27;</span>, <span class="string">&#x27;age&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="单向数据流"><a href="#单向数据流" class="headerlink" title="单向数据流"></a>单向数据流</h3><p>子组件只能使用，不能直接修改父组件数据。如需修改：</p>
+<ol>
+<li>复制一份自己改</li>
+<li>触发事件通知父组件改</li>
+</ol>
+<h3 id="属性验证"><a href="#属性验证" class="headerlink" title="属性验证"></a>属性验证</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">props</span>: &#123;</span><br><span class="line">  <span class="attr">count</span>: <span class="title class_">Number</span>,                    <span class="comment">// 指定类型</span></span><br><span class="line">  <span class="attr">msg</span>: [<span class="title class_">Number</span>, <span class="title class_">String</span>],            <span class="comment">// 多种类型</span></span><br><span class="line">  <span class="attr">message</span>: &#123; <span class="attr">type</span>: <span class="title class_">String</span>, <span class="attr">required</span>: <span class="literal">true</span> &#125;,  <span class="comment">// 必填</span></span><br><span class="line">  <span class="attr">price</span>: &#123; <span class="attr">type</span>: <span class="title class_">Number</span>, <span class="attr">default</span>: <span class="number">10</span> &#125;,       <span class="comment">// 默认值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="自定义事件（子传父）"><a href="#自定义事件（子传父）" class="headerlink" title="自定义事件（子传父）"></a>自定义事件（子传父）</h2><ol>
+<li>父组件定义接收方法</li>
+<li>监听自定义事件</li>
+<li>子组件 <code>$emit</code> 触发事件并传参</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 子组件</span></span><br><span class="line"><span class="variable language_">this</span>.$emit(<span class="string">&#x27;calc&#x27;</span>, data)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 父组件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">child</span> @<span class="attr">calc</span>=<span class="string">&quot;handleCalc&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">child</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="依赖注入（祖先传后代）"><a href="#依赖注入（祖先传后代）" class="headerlink" title="依赖注入（祖先传后代）"></a>依赖注入（祖先传后代）</h2><ul>
+<li><code>provide</code>：祖先组件暴露数据</li>
+<li><code>inject</code>：后代组件注入数据</li>
+</ul>
+<p>跨多层级传递时使用，避免 props 逐层传递。</p>
+<h2 id="属性透传-attrs"><a href="#属性透传-attrs" class="headerlink" title="属性透传 $attrs"></a>属性透传 $attrs</h2><p>组件上的 id、class、style 等属性会自动透传到根标签。</p>
+<ul>
+<li>多根标签时需手动指定</li>
+<li>props 接收过的属性不会透传</li>
+</ul>
+<h2 id="插槽-Slot"><a href="#插槽-Slot" class="headerlink" title="插槽 Slot"></a>插槽 Slot</h2><p>用于内容分发，组件中预留位置，使用时传入内容。</p>
+<h3 id="默认插槽"><a href="#默认插槽" class="headerlink" title="默认插槽"></a>默认插槽</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 子组件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 父组件使用 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">my-com</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>插入的内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">my-com</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="具名插槽"><a href="#具名插槽" class="headerlink" title="具名插槽"></a>具名插槽</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 子组件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;header&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 父组件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">v-slot:header</span>&gt;</span></span><br><span class="line">  头部内容</span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>简写：<code>#header</code></p>
+</blockquote>
+<h3 id="作用域插槽"><a href="#作用域插槽" class="headerlink" title="作用域插槽"></a>作用域插槽</h3><p>子组件数据传给父组件插槽使用：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 子组件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">slot</span> <span class="attr">:count</span>=<span class="string">&quot;count&quot;</span> <span class="attr">message</span>=<span class="string">&quot;你好&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 父组件接收 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">v-slot:default</span>=<span class="string">&quot;data&quot;</span>&gt;</span></span><br><span class="line">  &#123;&#123; data.count &#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="异步组件"><a href="#异步组件" class="headerlink" title="异步组件"></a>异步组件</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Vue</span>.<span class="title function_">defineAsyncComponent</span>(<span class="function">() =&gt;</span> <span class="keyword">import</span>(<span class="string">&#x27;./MyCom.vue&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<p>用于不确定何时加载完成的组件，如从服务器获取。</p>
+<h2 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">directives</span>: &#123;</span><br><span class="line">  <span class="attr">foc</span>: &#123;</span><br><span class="line">    <span class="title function_">mounted</span>(<span class="params">el, binding</span>) &#123;</span><br><span class="line">      el.<span class="title function_">focus</span>()</span><br><span class="line">      <span class="comment">// binding.value   指令的值</span></span><br><span class="line">      <span class="comment">// binding.arg     指令的参数</span></span><br><span class="line">      <span class="comment">// binding.modifiers 修饰符</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="全部指令汇总"><a href="#全部指令汇总" class="headerlink" title="全部指令汇总"></a>全部指令汇总</h2><table>
+<thead>
+<tr>
+<th>指令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>v-text</code></td>
+<td>渲染纯文本</td>
+</tr>
+<tr>
+<td><code>v-html</code></td>
+<td>渲染 HTML</td>
+</tr>
+<tr>
+<td><code>v-show</code></td>
+<td>CSS 显示隐藏</td>
+</tr>
+<tr>
+<td><code>v-if</code></td>
+<td>条件渲染（添加移除）</td>
+</tr>
+<tr>
+<td><code>v-else</code> &#x2F; <code>v-else-if</code></td>
+<td>条件分支</td>
+</tr>
+<tr>
+<td><code>v-for</code></td>
+<td>循环渲染</td>
+</tr>
+<tr>
+<td><code>v-on</code></td>
+<td>事件绑定</td>
+</tr>
+<tr>
+<td><code>v-bind</code></td>
+<td>属性绑定</td>
+</tr>
+<tr>
+<td><code>v-model</code></td>
+<td>双向绑定</td>
+</tr>
+<tr>
+<td><code>v-slot</code></td>
+<td>具名插槽</td>
+</tr>
+<tr>
+<td><code>v-pre</code></td>
+<td>跳过编译</td>
+</tr>
+<tr>
+<td><code>v-once</code></td>
+<td>只渲染一次</td>
+</tr>
+<tr>
+<td><code>v-memo</code></td>
+<td>依赖变化才重渲染</td>
+</tr>
+<tr>
+<td><code>v-cloak</code></td>
+<td>未编译时隐藏</td>
+</tr>
+</tbody></table>
+<h2 id="动态组件"><a href="#动态组件" class="headerlink" title="动态组件"></a>动态组件</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">&quot;comName&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>配合 <code>is</code> 属性实现组件动态切换，值为组件名称。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://your-domain.com/posts/60417/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.svg">
+      <meta itemprop="name" content="Mr Jia">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr Jia's Blog">
+      <meta itemprop="description" content="一个专注于技术分享与生活记录的个人博客，涵盖前端开发、后端技术、编程经验、工具推荐等内容">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Mr Jia's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/60417/" class="post-title-link" itemprop="url">Vue3 + Vant 移动端项目搭建</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-07-16 15:30:00 / 修改时间：10:03:05" itemprop="dateCreated datePublished" datetime="2026-07-16T15:30:00+08:00">2026-07-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">前端开发</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="项目创建"><a href="#项目创建" class="headerlink" title="项目创建"></a>项目创建</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init vue@latest</span><br></pre></td></tr></table></figure>
+
+<p>创建选项：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">√ Project name: ... vue-app</span><br><span class="line">√ Add TypeScript? ... Yes</span><br><span class="line">√ Add JSX Support? ... No</span><br><span class="line">√ Add Vue Router? ... Yes</span><br><span class="line">√ Add Pinia for state management? ... Yes</span><br><span class="line">√ Add Vitest? ... No</span><br><span class="line">√ Add E2E Testing? ... No</span><br><span class="line">√ Add ESLint? ... Yes</span><br></pre></td></tr></table></figure>
+
+<h2 id="Vant-UI-组件库"><a href="#Vant-UI-组件库" class="headerlink" title="Vant UI 组件库"></a>Vant UI 组件库</h2><p>官网地址：<span class="exturl" data-url="aHR0cHM6Ly92YW50LWNvbnRyaWIuZ2l0ZWUuaW8v">https://vant-contrib.gitee.io<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i vant</span><br></pre></td></tr></table></figure>
+
+<h3 id="按需自动导入"><a href="#按需自动导入" class="headerlink" title="按需自动导入"></a>按需自动导入</h3><p>安装插件：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i unplugin-vue-components -D</span><br></pre></td></tr></table></figure>
+
+<p>配置 <code>vite.config.ts</code>：</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; fileURLToPath, <span class="variable constant_">URL</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;node:url&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; defineConfig &#125; <span class="keyword">from</span> <span class="string">&#x27;vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> vue <span class="keyword">from</span> <span class="string">&#x27;@vitejs/plugin-vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Components</span> <span class="keyword">from</span> <span class="string">&#x27;unplugin-vue-components/vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">VantResolver</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;unplugin-vue-components/resolvers&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">defineConfig</span>(&#123;</span><br><span class="line">  <span class="attr">plugins</span>: [</span><br><span class="line">    <span class="title function_">vue</span>(),</span><br><span class="line">    <span class="title class_">Components</span>(&#123;</span><br><span class="line">      <span class="attr">resolvers</span>: [<span class="title class_">VantResolver</span>()],</span><br><span class="line">    &#125;),</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">resolve</span>: &#123;</span><br><span class="line">    <span class="attr">alias</span>: &#123;</span><br><span class="line">      <span class="string">&#x27;@&#x27;</span>: <span class="title function_">fileURLToPath</span>(<span class="keyword">new</span> <span class="title function_">URL</span>(<span class="string">&#x27;./src&#x27;</span>, <span class="keyword">import</span>.<span class="property">meta</span>.<span class="property">url</span>))</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="样式初始化"><a href="#样式初始化" class="headerlink" title="样式初始化"></a>样式初始化</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i normalize.css</span><br></pre></td></tr></table></figure>
+
+<p>在 <code>main.ts</code> 中导入：</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;normalize.css/normalize.css&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="SASS-预编译"><a href="#SASS-预编译" class="headerlink" title="SASS 预编译"></a>SASS 预编译</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i sass</span><br></pre></td></tr></table></figure>
+
+<h2 id="TabBar-底部导航"><a href="#TabBar-底部导航" class="headerlink" title="TabBar 底部导航"></a>TabBar 底部导航</h2><h3 id="图标字体"><a href="#图标字体" class="headerlink" title="图标字体"></a>图标字体</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://at.alicdn.com/t/font_3120366_9utchxxpyz.css&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="搭建步骤"><a href="#搭建步骤" class="headerlink" title="搭建步骤"></a>搭建步骤</h3><ol>
+<li>创建 4 个页面（首页、分类、购物车、我的）</li>
+<li>配置路由规则</li>
+<li>使用 router-link 实现页面跳转</li>
+<li>弹性布局实现底部导航样式</li>
+</ol>
+<h3 id="横屏适配"><a href="#横屏适配" class="headerlink" title="横屏适配"></a>横屏适配</h3><p>在 App.vue 中添加横屏提示，通过媒体查询控制显示：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 屏幕宽度大于 960px 时显示提示 */</span></span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">min-width</span>: <span class="number">960px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.landscape-tip</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="数据请求"><a href="#数据请求" class="headerlink" title="数据请求"></a>数据请求</h2><ol>
+<li>复制封装好的 request.ts</li>
+<li>创建 api 文件夹，封装各模块接口</li>
+<li>在页面中调用接口获取数据</li>
+<li>使用 Vant 轮播图组件渲染</li>
+</ol>
+<h2 id="登录注册流程"><a href="#登录注册流程" class="headerlink" title="登录注册流程"></a>登录注册流程</h2><h3 id="登录页"><a href="#登录页" class="headerlink" title="登录页"></a>登录页</h3><ul>
+<li>手机号 + 密码两个输入框</li>
+<li>登录按钮和去注册按钮</li>
+</ul>
+<h3 id="注册三步流程"><a href="#注册三步流程" class="headerlink" title="注册三步流程"></a>注册三步流程</h3><p><strong>Step 1 - 手机号验证</strong></p>
+<ul>
+<li>手机号输入框</li>
+<li>正则验证手机号格式</li>
+<li>计算属性控制下一步按钮是否可点击</li>
+<li>验证手机号是否已注册</li>
+</ul>
+<p><strong>Step 2 - 验证码</strong></p>
+<ul>
+<li>发送验证码按钮 + 倒计时</li>
+<li>验证码输入验证</li>
+</ul>
+<p><strong>Step 3 - 设置密码</strong></p>
+<ul>
+<li>两次密码输入确认</li>
+<li>验证一致后提交</li>
+</ul>
+<h2 id="首页搭建"><a href="#首页搭建" class="headerlink" title="首页搭建"></a>首页搭建</h2><h3 id="功能模块"><a href="#功能模块" class="headerlink" title="功能模块"></a>功能模块</h3><ul>
+<li><strong>轮播图</strong>：请求数据 + Swiper 组件渲染</li>
+<li><strong>宫格导航</strong>：静态数据 + Grid 组件</li>
+<li><strong>商品列表</strong>：<ul>
+<li>左图右文 &#x2F; 上图下文 两种布局切换</li>
+<li>点击按钮动态切换样式</li>
+</ul>
+</li>
+<li><strong>回到顶部</strong>：<ul>
+<li>滚动超过 500px 显示按钮</li>
+<li>点击滚动到顶部</li>
+</ul>
+</li>
+<li><strong>上拉加载</strong>：<ul>
+<li>List 组件实现无限滚动</li>
+<li>到底时加载下一页</li>
+<li>无数据时显示”没有更多了”</li>
+</ul>
+</li>
+<li><strong>下拉刷新</strong>：<ul>
+<li>PullRefresh 组件包裹</li>
+<li>刷新时重置数据和加载状态</li>
+</ul>
+</li>
+</ul>
+<h3 id="路由传参"><a href="#路由传参" class="headerlink" title="路由传参"></a>路由传参</h3><p>方式一：路由路径携带参数</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">router.<span class="title function_">push</span>(<span class="string">&#x27;/detail/&#x27;</span> + id)</span><br></pre></td></tr></table></figure>
+
+<p>方式二：query 传参（推荐）</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">router.<span class="title function_">push</span>(&#123; <span class="attr">path</span>: <span class="string">&#x27;/detail&#x27;</span>, <span class="attr">query</span>: &#123; id &#125; &#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="详情页"><a href="#详情页" class="headerlink" title="详情页"></a>详情页</h2><ul>
+<li>根据商品 ID 请求详情数据</li>
+<li>轮播图展示商品图片</li>
+<li>视频播放：点击弹出遮罩层播放</li>
+<li>在线客服：接入第三方客服 SDK</li>
+</ul>
+<h2 id="分类页"><a href="#分类页" class="headerlink" title="分类页"></a>分类页</h2><ul>
+<li>左侧：分类侧边导航</li>
+<li>右侧顶部：品牌 Tab 标签</li>
+<li>右侧内容：品牌下商品宫格展示</li>
+</ul>
+<h2 id="购物车"><a href="#购物车" class="headerlink" title="购物车"></a>购物车</h2><ul>
+<li>购物车列表渲染</li>
+<li>数量增减按钮</li>
+<li>单选 &#x2F; 全选功能</li>
+<li>详情页添加购物车</li>
+</ul>
+<h2 id="我的页面"><a href="#我的页面" class="headerlink" title="我的页面"></a>我的页面</h2><h3 id="跨域代理配置"><a href="#跨域代理配置" class="headerlink" title="跨域代理配置"></a>跨域代理配置</h3><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vite.config.ts</span></span><br><span class="line"><span class="attr">server</span>: &#123;</span><br><span class="line">  <span class="attr">host</span>: <span class="string">&#x27;0.0.0.0&#x27;</span>,</span><br><span class="line">  <span class="attr">port</span>: <span class="number">3000</span>,</span><br><span class="line">  <span class="attr">proxy</span>: &#123;</span><br><span class="line">    <span class="string">&#x27;/api&#x27;</span>: &#123;</span><br><span class="line">      <span class="attr">target</span>: <span class="string">&#x27;http://open.douyucdn.cn&#x27;</span>,</span><br><span class="line">      <span class="attr">changeOrigin</span>: <span class="literal">true</span>,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="用户状态"><a href="#用户状态" class="headerlink" title="用户状态"></a>用户状态</h3><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useUserStore &#125; <span class="keyword">from</span> <span class="string">&#x27;@/stores/user&#x27;</span></span><br><span class="line"><span class="keyword">const</span> user = <span class="title function_">useUserStore</span>()</span><br><span class="line"><span class="comment">// user.loginState  用户是否登录</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="页面缓存（KeepAlive）"><a href="#页面缓存（KeepAlive）" class="headerlink" title="页面缓存（KeepAlive）"></a>页面缓存（KeepAlive）</h2><ol>
+<li>使用 <code>&lt;keep-alive&gt;</code> 包裹 Home 页面</li>
+<li>离开页面时记录滚动距离</li>
+<li>重新进入时恢复滚动位置</li>
+</ol>
+<h2 id="路由守卫"><a href="#路由守卫" class="headerlink" title="路由守卫"></a>路由守卫</h2><h3 id="全局守卫"><a href="#全局守卫" class="headerlink" title="全局守卫"></a>全局守卫</h3><ul>
+<li><strong>前置守卫</strong>：路由跳转前，如验证登录</li>
+<li><strong>解析守卫</strong>：捕获错误</li>
+<li><strong>后置守卫</strong>：跳转完成后</li>
+</ul>
+<h3 id="独享守卫"><a href="#独享守卫" class="headerlink" title="独享守卫"></a>独享守卫</h3><ul>
+<li><code>beforeEnter</code>：配置在单条路由规则中</li>
+</ul>
+<h3 id="组件内守卫"><a href="#组件内守卫" class="headerlink" title="组件内守卫"></a>组件内守卫</h3><p>选项式 API：</p>
+<ul>
+<li><code>beforeRouteEnter</code> - 进入前</li>
+<li><code>beforeRouteUpdate</code> - 更新时</li>
+<li><code>beforeRouteLeave</code> - 离开前</li>
+</ul>
+<p>组合式 API：</p>
+<ul>
+<li><code>onBeforeRouteLeave</code></li>
+<li><code>onBeforeRouteUpdate</code></li>
+</ul>
+<h2 id="命名视图"><a href="#命名视图" class="headerlink" title="命名视图"></a>命名视图</h2><p>给 <code>router-view</code> 添加 name 属性，路由配置中使用 components 定义多个视图组件。</p>
+<h2 id="项目打包"><a href="#项目打包" class="headerlink" title="项目打包"></a>项目打包</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure>
+
+<h3 id="打包配置"><a href="#打包配置" class="headerlink" title="打包配置"></a>打包配置</h3><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vite.config.ts</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">defineConfig</span>(&#123;</span><br><span class="line">  <span class="attr">base</span>: <span class="string">&#x27;./&#x27;</span>,  <span class="comment">// 相对路径</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>路由模式使用 hash 模式</p>
+</blockquote>
+<h3 id="打包为-APP"><a href="#打包为-APP" class="headerlink" title="打包为 APP"></a>打包为 APP</h3><ol>
+<li>打包生成 dist 文件夹</li>
+<li>打开 HBuilderX</li>
+<li>创建 5+App 项目</li>
+<li>将 dist 内容复制替换进去</li>
+<li>配置打包生成 apk 文件</li>
+</ol>
+<h3 id="部署上线"><a href="#部署上线" class="headerlink" title="部署上线"></a>部署上线</h3><p>通过 FTP 将 dist 文件夹上传到服务器即可。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://your-domain.com/posts/24891/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.svg">
+      <meta itemprop="name" content="Mr Jia">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr Jia's Blog">
+      <meta itemprop="description" content="一个专注于技术分享与生活记录的个人博客，涵盖前端开发、后端技术、编程经验、工具推荐等内容">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Mr Jia's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/24891/" class="post-title-link" itemprop="url">Vue3 + Element Plus 后台管理系统搭建</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-07-16 15:20:00 / 修改时间：10:02:32" itemprop="dateCreated datePublished" datetime="2026-07-16T15:20:00+08:00">2026-07-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">前端开发</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Vue-项目创建"><a href="#Vue-项目创建" class="headerlink" title="Vue 项目创建"></a>Vue 项目创建</h2><h3 id="前置条件"><a href="#前置条件" class="headerlink" title="前置条件"></a>前置条件</h3><p>先要确保电脑中有安装 node（16版本以上），可以通过 <code>node -v</code> 查看</p>
+<h3 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init vue@latest</span><br></pre></td></tr></table></figure>
+
+<p>创建选项：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">√ Project name: ... vue-admin          # 项目名称</span><br><span class="line">√ Add TypeScript? ... No / Yes         # 是否添加 ts</span><br><span class="line">√ Add JSX Support? ... No / Yes        # 是否添加 jsx</span><br><span class="line">√ Add Vue Router? ... No / Yes         # 是否添加路由</span><br><span class="line">√ Add Pinia for state management? ...  # 是否添加状态管理</span><br><span class="line">√ Add Vitest for Unit Testing? ...     # 是否需要测试工具</span><br><span class="line">√ Add an End-to-End Testing Solution?  # 端到端测试</span><br><span class="line">√ Add ESLint for code quality? ...     # 是否设置编码风格</span><br></pre></td></tr></table></figure>
+
+<h3 id="启动项目"><a href="#启动项目" class="headerlink" title="启动项目"></a>启动项目</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> vue-admin        <span class="comment"># 进入项目目录</span></span><br><span class="line">npm install         <span class="comment"># 安装依赖</span></span><br><span class="line">npm run dev         <span class="comment"># 运行项目</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>cnpm 安装：<code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></p>
+</blockquote>
+<h2 id="文件目录介绍"><a href="#文件目录介绍" class="headerlink" title="文件目录介绍"></a>文件目录介绍</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">vue-admin/</span><br><span class="line">├── .vscode/              # vscode 自带文件</span><br><span class="line">├── node_modules/         # 项目依赖文件</span><br><span class="line">├── public/               # 静态资源公共文件</span><br><span class="line">├── .gitignore            # git 忽略文件</span><br><span class="line">├── index.html            # 项目唯一 html 文件，入口</span><br><span class="line">├── package.json          # node 配置文件</span><br><span class="line">├── README.md             # 项目说明文件</span><br><span class="line">├── vite.config.js        # 项目配置文件</span><br><span class="line">└── src/                  # 写代码的主目录</span><br><span class="line">    ├── assets/           # 图片、样式等资源</span><br><span class="line">    ├── components/       # 封装的组件</span><br><span class="line">    ├── router/           # 路由配置</span><br><span class="line">    ├── views/            # 页面文件夹 (pages)</span><br><span class="line">    ├── App.vue           # 根组件</span><br><span class="line">    ├── main.js           # 入口 js 文件</span><br><span class="line">    ├── store/            # 全局状态管理</span><br><span class="line">    ├── utils/            # 封装的工具函数</span><br><span class="line">    └── api/              # 数据请求方法</span><br></pre></td></tr></table></figure>
+
+<h2 id="路由配置"><a href="#路由配置" class="headerlink" title="路由配置"></a>路由配置</h2><p>在 router 文件夹的 index.js 中配置路由规则，然后导出路由实例，在 main.js 中导入并挂载。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// router/index.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; createRouter, createWebHistory, createWebHashHistory &#125; <span class="keyword">from</span> <span class="string">&#x27;vue-router&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">HomeView</span> <span class="keyword">from</span> <span class="string">&#x27;../views/HomeView.vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> routes = [</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">path</span>: <span class="string">&#x27;/&#x27;</span>,</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;home&#x27;</span>,</span><br><span class="line">    <span class="attr">component</span>: <span class="title class_">HomeView</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">path</span>: <span class="string">&#x27;/about&#x27;</span>,</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;about&#x27;</span>,</span><br><span class="line">    <span class="comment">// 路由懒加载</span></span><br><span class="line">    <span class="attr">component</span>: <span class="function">() =&gt;</span> <span class="keyword">import</span>(<span class="string">&#x27;../views/AboutView.vue&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> router = <span class="title function_">createRouter</span>(&#123;</span><br><span class="line">  <span class="comment">// History 模式：/ 开头，需后端配合，路径美观</span></span><br><span class="line">  <span class="comment">// Hash 模式：# 号开头，无需后端配合</span></span><br><span class="line">  <span class="attr">history</span>: <span class="title function_">createWebHashHistory</span>(<span class="keyword">import</span>.<span class="property">meta</span>.<span class="property">env</span>.<span class="property">BASE_URL</span>),</span><br><span class="line">  routes</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> router</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; createApp &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">App</span> <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">&#x27;./router&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = <span class="title function_">createApp</span>(<span class="title class_">App</span>)</span><br><span class="line">app.<span class="title function_">use</span>(router)</span><br><span class="line">app.<span class="title function_">mount</span>(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="UI-组件库-Element-Plus"><a href="#UI-组件库-Element-Plus" class="headerlink" title="UI 组件库 - Element Plus"></a>UI 组件库 - Element Plus</h2><p>官网地址：<span class="exturl" data-url="aHR0cHM6Ly9lbGVtZW50LXBsdXMuZ2l0ZWUuaW8vemgtQ04v">https://element-plus.gitee.io/zh-CN/<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install element-plus</span><br></pre></td></tr></table></figure>
+
+<h3 id="按需自动导入配置"><a href="#按需自动导入配置" class="headerlink" title="按需自动导入配置"></a>按需自动导入配置</h3><ol>
+<li>安装插件</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -D unplugin-vue-components unplugin-auto-import</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>配置 vite.config.js</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vite.config.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; fileURLToPath, <span class="variable constant_">URL</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;node:url&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; defineConfig &#125; <span class="keyword">from</span> <span class="string">&#x27;vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> vue <span class="keyword">from</span> <span class="string">&#x27;@vitejs/plugin-vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">AutoImport</span> <span class="keyword">from</span> <span class="string">&#x27;unplugin-auto-import/vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Components</span> <span class="keyword">from</span> <span class="string">&#x27;unplugin-vue-components/vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">ElementPlusResolver</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;unplugin-vue-components/resolvers&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">defineConfig</span>(&#123;</span><br><span class="line">  <span class="attr">plugins</span>: [</span><br><span class="line">    <span class="title function_">vue</span>(),</span><br><span class="line">    <span class="title class_">AutoImport</span>(&#123;</span><br><span class="line">      <span class="attr">resolvers</span>: [<span class="title class_">ElementPlusResolver</span>()],</span><br><span class="line">    &#125;),</span><br><span class="line">    <span class="title class_">Components</span>(&#123;</span><br><span class="line">      <span class="attr">resolvers</span>: [<span class="title class_">ElementPlusResolver</span>()],</span><br><span class="line">    &#125;),</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">resolve</span>: &#123;</span><br><span class="line">    <span class="attr">alias</span>: &#123;</span><br><span class="line">      <span class="string">&#x27;@&#x27;</span>: <span class="title function_">fileURLToPath</span>(<span class="keyword">new</span> <span class="title function_">URL</span>(<span class="string">&#x27;./src&#x27;</span>, <span class="keyword">import</span>.<span class="property">meta</span>.<span class="property">url</span>))</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="图标组件"><a href="#图标组件" class="headerlink" title="图标组件"></a>图标组件</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install @element-plus/icons-vue</span><br></pre></td></tr></table></figure>
+
+<h2 id="格式化样式"><a href="#格式化样式" class="headerlink" title="格式化样式"></a>格式化样式</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install normalize.css</span><br></pre></td></tr></table></figure>
+
+<p>在 main.js 中导入：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;normalize.css/normalize.css&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="SASS-预编译"><a href="#SASS-预编译" class="headerlink" title="SASS 预编译"></a>SASS 预编译</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install sass</span><br></pre></td></tr></table></figure>
+
+<p>使用时在 style 标签添加 <code>lang=&quot;scss&quot;</code> 属性：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;style lang=&quot;scss&quot; scoped&gt;</span><br><span class="line">/* scss 样式 */</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="后台布局搭建"><a href="#后台布局搭建" class="headerlink" title="后台布局搭建"></a>后台布局搭建</h2><h3 id="基础布局结构"><a href="#基础布局结构" class="headerlink" title="基础布局结构"></a>基础布局结构</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class=&quot;common-layout&quot;&gt;</span><br><span class="line">    &lt;el-container&gt;</span><br><span class="line">      &lt;el-aside width=&quot;200px&quot;&gt;Aside&lt;/el-aside&gt;</span><br><span class="line">      &lt;el-container&gt;</span><br><span class="line">        &lt;el-header&gt;Header&lt;/el-header&gt;</span><br><span class="line">        &lt;el-main&gt;Main&lt;/el-main&gt;</span><br><span class="line">      &lt;/el-container&gt;</span><br><span class="line">    &lt;/el-container&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="侧边栏-Logo"><a href="#侧边栏-Logo" class="headerlink" title="侧边栏 Logo"></a>侧边栏 Logo</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-aside&gt;</span><br><span class="line">  &lt;div class=&quot;logo-box&quot;&gt;</span><br><span class="line">    &lt;el-image style=&quot;width: 32px;height: 32px&quot; :src=&quot;url&quot;&gt;&lt;/el-image&gt;</span><br><span class="line">    &lt;h2 class=&quot;manage-title&quot; v-show=&quot;!collapse&quot;&gt;电商后台管理系统&lt;/h2&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/el-aside&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="折叠按钮"><a href="#折叠按钮" class="headerlink" title="折叠按钮"></a>折叠按钮</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-header&gt;</span><br><span class="line">  &lt;el-icon size=&quot;30&quot; @click=&quot;collapse = !collapse&quot;&gt;</span><br><span class="line">    &lt;component :is=&quot;headerLeft&quot;&gt;&lt;/component&gt;</span><br><span class="line">  &lt;/el-icon&gt;</span><br><span class="line">&lt;/el-header&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="侧边栏菜单"><a href="#侧边栏菜单" class="headerlink" title="侧边栏菜单"></a>侧边栏菜单</h2><p>在 <code>src/components</code> 下创建 <code>AsideCom.vue</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">import &#123; Location, House, User &#125; from &#x27;@element-plus/icons-vue&#x27;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;&#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  components: &#123;</span><br><span class="line">    Location,</span><br><span class="line">    House,</span><br><span class="line">    User</span><br><span class="line">  &#125;,</span><br><span class="line">  props: [&#x27;collapse&#x27;]</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;el-menu :collapse=&quot;collapse&quot; class=&quot;el-menu-vertical-demo&quot;&gt;</span><br><span class="line">    &lt;el-menu-item&gt;</span><br><span class="line">      &lt;template #title&gt;</span><br><span class="line">        &lt;el-icon&gt;&lt;House /&gt;&lt;/el-icon&gt;</span><br><span class="line">        &lt;span&gt;首页&lt;/span&gt;</span><br><span class="line">      &lt;/template&gt;</span><br><span class="line">    &lt;/el-menu-item&gt;</span><br><span class="line">    &lt;el-sub-menu&gt;</span><br><span class="line">      &lt;template #title&gt;</span><br><span class="line">        &lt;el-icon&gt;&lt;User /&gt;&lt;/el-icon&gt;</span><br><span class="line">        &lt;span&gt;账号管理&lt;/span&gt;</span><br><span class="line">      &lt;/template&gt;</span><br><span class="line">      &lt;el-menu-item&gt;管理员列表&lt;/el-menu-item&gt;</span><br><span class="line">      &lt;el-menu-item&gt;用户列表&lt;/el-menu-item&gt;</span><br><span class="line">    &lt;/el-sub-menu&gt;</span><br><span class="line">  &lt;/el-menu&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="登录页面"><a href="#登录页面" class="headerlink" title="登录页面"></a>登录页面</h2><h3 id="MD5-加密"><a href="#MD5-加密" class="headerlink" title="MD5 加密"></a>MD5 加密</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install md5</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> md5 <span class="keyword">from</span> <span class="string">&#x27;md5&#x27;</span></span><br><span class="line"><span class="title function_">md5</span>(<span class="string">&#x27;要加密的明文&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="Axios-请求封装"><a href="#Axios-请求封装" class="headerlink" title="Axios 请求封装"></a>Axios 请求封装</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install axios</span><br></pre></td></tr></table></figure>
+
+<p>创建 <code>src/utils/request.js</code>：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/utils/request.js</span></span><br><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">&#x27;axios&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> request = axios.<span class="title function_">create</span>(&#123;</span><br><span class="line">  <span class="attr">baseURL</span>: <span class="string">&#x27;http://121.89.205.189:3000/admin&#x27;</span>,</span><br><span class="line">  <span class="attr">timeout</span>: <span class="number">60000</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">ajax</span>(<span class="params">config</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; url = <span class="string">&#x27;&#x27;</span>, method = <span class="string">&#x27;GET&#x27;</span>, data = &#123;&#125;, headers = &#123;&#125; &#125; = config</span><br><span class="line"></span><br><span class="line">  <span class="keyword">switch</span> (method.<span class="title function_">toUpperCase</span>()) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;GET&#x27;</span>:</span><br><span class="line">      <span class="keyword">return</span> request.<span class="title function_">get</span>(url, &#123; <span class="attr">params</span>: data &#125;)</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;POST&#x27;</span>:</span><br><span class="line">      <span class="keyword">if</span> (headers[<span class="string">&#x27;content-type&#x27;</span>] == <span class="string">&#x27;application/x-www-form-url-encoded&#x27;</span>) &#123;</span><br><span class="line">        <span class="keyword">const</span> obj = <span class="keyword">new</span> <span class="title class_">URLSearchParams</span>()</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">in</span> data) obj.<span class="title function_">append</span>(key, data[key])</span><br><span class="line">        <span class="keyword">return</span> request.<span class="title function_">post</span>(url, obj, &#123; headers &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (headers[<span class="string">&#x27;content-type&#x27;</span>] == <span class="string">&#x27;multipart/form-data&#x27;</span>) &#123;</span><br><span class="line">        <span class="keyword">const</span> obj = <span class="keyword">new</span> <span class="title class_">FormData</span>()</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">in</span> data) obj.<span class="title function_">append</span>(key, data[key])</span><br><span class="line">        <span class="keyword">return</span> request.<span class="title function_">post</span>(url, obj, &#123; headers &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> request.<span class="title function_">post</span>(url, data)</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;PUT&#x27;</span>:</span><br><span class="line">      <span class="keyword">return</span> request.<span class="title function_">put</span>(url, data)</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;DELETE&#x27;</span>:</span><br><span class="line">      <span class="keyword">return</span> request.<span class="title function_">delete</span>(url, &#123; data &#125;)</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;PATCH&#x27;</span>:</span><br><span class="line">      <span class="keyword">return</span> request.<span class="title function_">patch</span>(url, data)</span><br><span class="line">    <span class="attr">default</span>:</span><br><span class="line">      <span class="keyword">return</span> request.<span class="title function_">request</span>(config)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="API-接口封装"><a href="#API-接口封装" class="headerlink" title="API 接口封装"></a>API 接口封装</h3><p>创建 <code>src/api/user.js</code>：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> ajax <span class="keyword">from</span> <span class="string">&#x27;@/utils/request&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 登录接口</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">loginFn</span>(<span class="params">data</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="title function_">ajax</span>(&#123;</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;/admin/login&#x27;</span>,</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;POST&#x27;</span>,</span><br><span class="line">    data</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Vuex-状态管理"><a href="#Vuex-状态管理" class="headerlink" title="Vuex 状态管理"></a>Vuex 状态管理</h2><h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install vuex@next --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="数据持久化"><a href="#数据持久化" class="headerlink" title="数据持久化"></a>数据持久化</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i vuex-persistedstate</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> createPersistedState <span class="keyword">from</span> <span class="string">&#x27;vuex-persistedstate&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// plugins 配置</span></span><br><span class="line"><span class="attr">plugins</span>: [</span><br><span class="line">  <span class="title function_">createPersistedState</span>(&#123;</span><br><span class="line">    <span class="attr">reducer</span>: <span class="function"><span class="params">state</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="attr">count</span>: state.<span class="property">count</span>  <span class="comment">// 需要持久化的数据</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<h2 id="Axios-拦截器"><a href="#Axios-拦截器" class="headerlink" title="Axios 拦截器"></a>Axios 拦截器</h2><ul>
+<li><strong>请求拦截器</strong>：发送请求前做处理，如携带 token</li>
+<li><strong>响应拦截器</strong>：请求返回后做处理，如统一处理数据格式</li>
+</ul>
+<h2 id="功能模块"><a href="#功能模块" class="headerlink" title="功能模块"></a>功能模块</h2><h3 id="账号管理"><a href="#账号管理" class="headerlink" title="账号管理"></a>账号管理</h3><ul>
+<li>管理员列表（增删改查）</li>
+<li>用户列表</li>
+</ul>
+<h3 id="轮播图管理"><a href="#轮播图管理" class="headerlink" title="轮播图管理"></a>轮播图管理</h3><ul>
+<li>轮播图列表</li>
+<li>添加轮播图（FileReader 转 base64）</li>
+</ul>
+<h3 id="面包屑导航"><a href="#面包屑导航" class="headerlink" title="面包屑导航"></a>面包屑导航</h3><ul>
+<li>监听路由变化</li>
+<li>动态生成面包屑数据</li>
+</ul>
+<h3 id="权限控制"><a href="#权限控制" class="headerlink" title="权限控制"></a>权限控制</h3><ul>
+<li>根据登录用户权限渲染侧边栏</li>
+<li>路由守卫验证登录状态</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://your-domain.com/posts/30281/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.svg">
+      <meta itemprop="name" content="Mr Jia">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr Jia's Blog">
+      <meta itemprop="description" content="一个专注于技术分享与生活记录的个人博客，涵盖前端开发、后端技术、编程经验、工具推荐等内容">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Mr Jia's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/30281/" class="post-title-link" itemprop="url">TypeScript 入门指南</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-07-16 15:10:00 / 修改时间：10:01:58" itemprop="dateCreated datePublished" datetime="2026-07-16T15:10:00+08:00">2026-07-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">前端开发</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="TypeScript-简介"><a href="#TypeScript-简介" class="headerlink" title="TypeScript 简介"></a>TypeScript 简介</h2><p>TypeScript 是 JavaScript 的超集，添加了类型系统和编译时检查。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 全局安装 TypeScript</span></span><br><span class="line">npm install -g typescript</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装 ts-node，用来直接执行 ts 文件</span></span><br><span class="line">npm install ts-node</span><br></pre></td></tr></table></figure>
+
+<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 编译指定的 ts 文件</span></span><br><span class="line">tsc 需要编译的文件</span><br></pre></td></tr></table></figure>
+
+<p>编译后会生成对应的 <code>.js</code> 文件，可以直接在 Node.js 或浏览器中运行。</p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>tsc --version</code></td>
+<td>查看 TypeScript 版本</td>
+</tr>
+<tr>
+<td><code>tsc --init</code></td>
+<td>初始化 tsconfig.json 配置文件</td>
+</tr>
+<tr>
+<td><code>tsc --watch</code></td>
+<td>监听模式，自动编译</td>
+</tr>
+<tr>
+<td><code>ts-node 文件名</code></td>
+<td>直接运行 ts 文件</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://your-domain.com/posts/24345/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.svg">
+      <meta itemprop="name" content="Mr Jia">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr Jia's Blog">
+      <meta itemprop="description" content="一个专注于技术分享与生活记录的个人博客，涵盖前端开发、后端技术、编程经验、工具推荐等内容">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Mr Jia's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/24345/" class="post-title-link" itemprop="url">TinyMCE 富文本编辑器使用教程</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-07-16 15:00:00 / 修改时间：10:01:54" itemprop="dateCreated datePublished" datetime="2026-07-16T15:00:00+08:00">2026-07-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">前端开发</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="TinyMCE-4-x-版本"><a href="#TinyMCE-4-x-版本" class="headerlink" title="TinyMCE 4.x 版本"></a>TinyMCE 4.x 版本</h2><p>我们使用的是 4 版本，官网地址：</p>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cudGlueS5jbG91ZC9kb2NzLTR4Lw==">官方文档<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovL3RpbnltY2UuYXgtei5jbi9jb25maWd1cmUvaW50ZWdyYXRpb24tYW5kLXNldHVwLnBocA==">中文文档<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<h2 id="1-下载依赖"><a href="#1-下载依赖" class="headerlink" title="1. 下载依赖"></a>1. 下载依赖</h2><p><a target="_blank" rel="noopener" href="https://www.tiny.cloud/get-tiny/custom-builds/">取消 <code>combine all js files</code> 选择</a></p>
+<h2 id="2-下载汉化包"><a href="#2-下载汉化包" class="headerlink" title="2. 下载汉化包"></a>2. 下载汉化包</h2><p><span class="exturl" data-url="aHR0cHM6Ly9kb3dubG9hZC50aW55LmNsb3VkL3RpbnltY2UvY29tbXVuaXR5L2xhbmd1YWdlcGFja3MvNi96aC1IYW5zLnppcA==">汉化包下载<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="3-文件引入项目"><a href="#3-文件引入项目" class="headerlink" title="3. 文件引入项目"></a>3. 文件引入项目</h2><ul>
+<li>解压下载好的核心包 (tinymce) 和汉化包 (langs)，将解压好的汉化包放入到核心包文件夹中</li>
+<li>将核心包放入到项目 <code>public</code> 文件夹中</li>
+</ul>
+<h2 id="4-index-html-中引入"><a href="#4-index-html-中引入" class="headerlink" title="4. index.html 中引入"></a>4. index.html 中引入</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/tinymce/tinymce.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/tinymce/langs/zh-Hans.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-单文件中使用"><a href="#5-单文件中使用" class="headerlink" title="5. 单文件中使用"></a>5. 单文件中使用</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;textarea id=&quot;default-editor&quot;&gt;</span><br><span class="line">    &#123;&#123; value &#125;&#125;</span><br><span class="line">  &lt;/textarea&gt;</span><br><span class="line">  &lt;el-button @click=&quot;handleSubmit&quot;&gt;click&lt;/el-button&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import &#123; defineComponent &#125; from &#x27;vue&#x27;</span><br><span class="line"></span><br><span class="line">export default defineComponent(&#123;</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      value: &#x27;&lt;p&gt;&lt;em&gt;Hello&lt;/em&gt;, &lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;strong&gt;World!&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&#x27;,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    handleSubmit() &#123;</span><br><span class="line">      // 获取内容的方式</span><br><span class="line">      console.log(tinymce.activeEditor.getContent())</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted() &#123;</span><br><span class="line">    tinymce.init(&#123;</span><br><span class="line">      selector: &#x27;textarea#default-editor&#x27;,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-插件功能的使用"><a href="#6-插件功能的使用" class="headerlink" title="6. 插件功能的使用"></a>6. 插件功能的使用</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cudGlueS5jbG91ZC9kb2NzLTR4L3BsdWdpbnMvcGFzdGUv">内置插件列表<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">tinymce.<span class="title function_">init</span>(&#123;</span><br><span class="line">  <span class="attr">selector</span>: <span class="string">&#x27;textarea#default-editor&#x27;</span>,</span><br><span class="line">  <span class="attr">branding</span>: <span class="literal">false</span>,           <span class="comment">// 取消右下角默认提示</span></span><br><span class="line">  <span class="attr">height</span>: <span class="number">900</span>,</span><br><span class="line">  <span class="attr">plugins</span>: <span class="string">&#x27;advlist link image lists paste&#x27;</span>,  <span class="comment">// 使用插件</span></span><br><span class="line">  <span class="attr">paste_data_images</span>: <span class="literal">true</span>,   <span class="comment">// 支持图片粘贴</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://your-domain.com/posts/52054/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.svg">
+      <meta itemprop="name" content="Mr Jia">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr Jia's Blog">
+      <meta itemprop="description" content="一个专注于技术分享与生活记录的个人博客，涵盖前端开发、后端技术、编程经验、工具推荐等内容">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Mr Jia's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/52054/" class="post-title-link" itemprop="url">NPM 常用命令大全</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-07-16 14:00:00 / 修改时间：09:55:32" itemprop="dateCreated datePublished" datetime="2026-07-16T14:00:00+08:00">2026-07-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">前端开发</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="NPM-初始化"><a href="#NPM-初始化" class="headerlink" title="NPM 初始化"></a>NPM 初始化</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 初始化配置，过程中会提示很多问题</span></span><br><span class="line">npm init</span><br><span class="line"></span><br><span class="line"><span class="comment"># 自动确认所有选项</span></span><br><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
+
+<p>初始化后会生成 <code>package.json</code> 配置文件。</p>
+<h2 id="全局安装-g"><a href="#全局安装-g" class="headerlink" title="全局安装 (-g)"></a>全局安装 (-g)</h2><p>全局安装的插件会安装在 node 所在文件夹下，因为 node 配置了全局环境变量，所以可以直接执行。</p>
+<p><strong>适用场景</strong>：命令行工具（CLI 类型）</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 全局安装命令格式</span></span><br><span class="line">npm i 插件名 -g</span><br></pre></td></tr></table></figure>
+
+<h3 id="常用全局工具"><a href="#常用全局工具" class="headerlink" title="常用全局工具"></a>常用全局工具</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># nrm - 切换 npm 下载镜像源</span></span><br><span class="line">npm i nrm -g</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn - 包管理器，支持断点下载</span></span><br><span class="line">npm i yarn -g</span><br><span class="line"></span><br><span class="line"><span class="comment"># anywhere - Web 服务工具，可自定义端口号（anywhere 4000）</span></span><br><span class="line">npm i anywhere -g</span><br><span class="line"></span><br><span class="line"><span class="comment"># http-server - Web 服务工具</span></span><br><span class="line">npm i http-server -g</span><br><span class="line"></span><br><span class="line"><span class="comment"># nodemon - 修改 node 文件后自动重新执行</span></span><br><span class="line">npm i nodemon -g</span><br></pre></td></tr></table></figure>
+
+<h2 id="项目依赖安装-–save-S"><a href="#项目依赖安装-–save-S" class="headerlink" title="项目依赖安装 (–save &#x2F; -S)"></a>项目依赖安装 (–save &#x2F; -S)</h2><p>安装在当前文件夹的 <code>node_modules</code> 文件夹中。</p>
+<p>在 <code>package.json</code> 中记录在 <code>dependencies</code> 字段下。</p>
+<p><strong>定义</strong>：项目上线后运行仍然需要使用的插件</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i 插件名 --save</span><br><span class="line">npm i 插件名 -S</span><br></pre></td></tr></table></figure>
+
+<h3 id="常用项目依赖"><a href="#常用项目依赖" class="headerlink" title="常用项目依赖"></a>常用项目依赖</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># jQuery - JS 中 DOM 的快速开发插件</span></span><br><span class="line">npm i jquery -S</span><br><span class="line"></span><br><span class="line"><span class="comment"># lodash - 工具函数库</span></span><br><span class="line">npm i lodash -S</span><br></pre></td></tr></table></figure>
+
+<h2 id="开发依赖安装-–save-dev-D"><a href="#开发依赖安装-–save-dev-D" class="headerlink" title="开发依赖安装 (–save-dev &#x2F; -D)"></a>开发依赖安装 (–save-dev &#x2F; -D)</h2><p>在 <code>package.json</code> 中记录在 <code>devDependencies</code> 字段下。</p>
+<p><strong>定义</strong>：开发时使用，上线时不再需要（如打包工具、测试工具）</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i 插件名 --save-dev</span><br><span class="line">npm i 插件名 -D</span><br></pre></td></tr></table></figure>
+
+<h3 id="常用开发依赖"><a href="#常用开发依赖" class="headerlink" title="常用开发依赖"></a>常用开发依赖</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># gulp - 构建工具</span></span><br><span class="line">npm i gulp -D</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除依赖"><a href="#删除依赖" class="headerlink" title="删除依赖"></a>删除依赖</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 删除全局依赖</span></span><br><span class="line">npm uninstall 插件名 -g</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除项目依赖</span></span><br><span class="line">npm uninstall 插件名 -S</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除开发依赖</span></span><br><span class="line">npm uninstall 插件名 -D</span><br></pre></td></tr></table></figure>
+
+<h2 id="缓存清理"><a href="#缓存清理" class="headerlink" title="缓存清理"></a>缓存清理</h2><p>遇到 <code>Error -4048</code> 等错误时可以尝试清除缓存：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 验证并清理缓存</span></span><br><span class="line">npm cache verify</span><br><span class="line"></span><br><span class="line"><span class="comment"># 强制清除缓存</span></span><br><span class="line">npm cache clean --force</span><br></pre></td></tr></table></figure>
+
+<h2 id="总结对比"><a href="#总结对比" class="headerlink" title="总结对比"></a>总结对比</h2><table>
+<thead>
+<tr>
+<th>安装方式</th>
+<th>缩写</th>
+<th>位置</th>
+<th>package.json 字段</th>
+<th>使用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>全局安装</td>
+<td><code>-g</code></td>
+<td>node 全局目录</td>
+<td>-</td>
+<td>命令行工具</td>
+</tr>
+<tr>
+<td>项目依赖</td>
+<td><code>-S</code></td>
+<td>node_modules</td>
+<td>dependencies</td>
+<td>线上运行必需</td>
+</tr>
+<tr>
+<td>开发依赖</td>
+<td><code>-D</code></td>
+<td>node_modules</td>
+<td>devDependencies</td>
+<td>仅开发时使用</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://your-domain.com/posts/13965/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.svg">
+      <meta itemprop="name" content="Mr Jia">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr Jia's Blog">
+      <meta itemprop="description" content="一个专注于技术分享与生活记录的个人博客，涵盖前端开发、后端技术、编程经验、工具推荐等内容">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Mr Jia's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/13965/" class="post-title-link" itemprop="url">Git 使用教程</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-07-16 12:00:00 / 修改时间：09:49:18" itemprop="dateCreated datePublished" datetime="2026-07-16T12:00:00+08:00">2026-07-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">开发工具</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Git-代码管理及控制工具"><a href="#Git-代码管理及控制工具" class="headerlink" title="Git 代码管理及控制工具"></a>Git 代码管理及控制工具</h2><p>目前最常用的代码管理工具: git 和 svn</p>
+<p>对于程序员而言，最重要的是代码</p>
+<p>对于公司而言，花大笔钱来养的不是程序员，而是他们的代码</p>
+<p>在公司中开发一个项目可能有多个前端工程师，但是每天写完代码咱们要将所有代码整合在一起</p>
+<h2 id="Git-的使用"><a href="#Git-的使用" class="headerlink" title="Git 的使用"></a>Git 的使用</h2><ul>
+<li><p>第一步: 下载安装 <span class="exturl" data-url="aHR0cHM6Ly9naXQtc2NtLmNvbS8=">https://git-scm.com/<i class="fa fa-external-link-alt"></i></span> 安装路径没有任何要求</p>
+</li>
+<li><p>第二步: <code>git init</code> 初始化一个 git 仓库（本地仓库）。创建一个文件夹 my-git，创建一个文件 xyj.html</p>
+</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 追踪所有文件</span></span><br><span class="line">git add . </span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以通过 git diff 来查看当前代码和上一次提交的代码有什么区别</span></span><br><span class="line"><span class="comment"># git log 和 git diff 之后，输入 q 可以退出</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>第三步: <code>git add xyj.html</code></li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add xyj.html   </span><br></pre></td></tr></table></figure>
+
+<p>追踪、跟踪文件代码，注意后缀名要加上，将创建好的项目提交到缓存区</p>
+<ul>
+<li>第四步: <code>git commit -m &#39;提交描述&#39;</code></li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&#x27;书名起好&#x27;</span> </span><br></pre></td></tr></table></figure>
+
+<p>将我们刚刚追踪的文件提交到本地仓库中，-m 是提交时的描述信息</p>
+<p>我们需要自己配置邮箱（该邮箱可以不存在），此时是第一次提交，git 会提示你没有邮箱和密码：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email <span class="string">&#x27;326403872@qq.com&#x27;</span></span><br><span class="line">git config --global user.name <span class="string">&#x27;Jia&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>配置好邮箱和用户名之后，再次提交即可</p>
+<ul>
+<li>第五步: 查看提交记录</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span>                                   <span class="comment"># 详细提交记录</span></span><br><span class="line">git <span class="built_in">log</span> --pretty=oneline                 <span class="comment"># 以一行的方式来输出提交记录</span></span><br></pre></td></tr></table></figure>
+
+<p>可以查看到当前的版本信息，也可以看到我们的版本 id 和提交人的信息，还有提交时间和描述信息</p>
+<h2 id="开始编写代码"><a href="#开始编写代码" class="headerlink" title="开始编写代码"></a>开始编写代码</h2><ul>
+<li>编写第一天代码，其实就是我们一天的代码写完了之后</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .        <span class="comment"># 这里的 . 代表追踪所有文件的意思</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&#x27;提交第一回&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\jzl\Desktop\git&gt;git add .</span><br><span class="line">C:\Users\jzl\Desktop\git&gt;git commit -m <span class="string">&#x27;提交第一回&#x27;</span></span><br><span class="line">[master 91f9713] <span class="string">&#x27;提交第一回&#x27;</span></span><br><span class="line"> 1 file changed, 1 insertion(+), 1 deletion(-)</span><br><span class="line">C:\Users\jzl\Desktop\git&gt;git <span class="built_in">log</span></span><br><span class="line">commit 91f9713831c352c1373fd87c1a176973c1bab48c (HEAD -&gt; master)</span><br><span class="line">Author: Jia &lt;326403872@qq.com&gt;</span><br><span class="line">Date:   Wed Dec 18 20:58:07 2024 +0800</span><br><span class="line">    <span class="string">&#x27;提交第一回&#x27;</span></span><br><span class="line">commit 7888de9abcb7c530b5d3d80f7e9fadc0cfd5ce37</span><br><span class="line">Author: Jia &lt;326403872@qq.com&gt;</span><br><span class="line">Date:   Wed Dec 18 20:37:05 2024 +0800</span><br><span class="line">    <span class="string">&#x27;书名起好&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>当写完第二天的代码后，执行 <code>git add .</code> 追踪，执行 <code>git commit -m &#39;第二回完&#39;</code></li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\jzl\Desktop\git&gt;git add .</span><br><span class="line">C:\Users\jzl\Desktop\git&gt;git commit -m <span class="string">&#x27;第二回完&#x27;</span></span><br><span class="line">[master 0157838] <span class="string">&#x27;第二回完&#x27;</span></span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br><span class="line">C:\Users\jzl\Desktop\git&gt;git <span class="built_in">log</span></span><br><span class="line">commit 0157838514b1bdc0bdd86c80663dac6af9207445 (HEAD -&gt; master)</span><br><span class="line">Author: Jia &lt;326403872@qq.com&gt;</span><br><span class="line">Date:   Wed Dec 18 21:00:47 2024 +0800</span><br><span class="line">    <span class="string">&#x27;第二回完&#x27;</span></span><br><span class="line">commit 91f9713831c352c1373fd87c1a176973c1bab48c</span><br><span class="line">Author: Jia &lt;326403872@qq.com&gt;</span><br><span class="line">Date:   Wed Dec 18 20:58:07 2024 +0800</span><br><span class="line">    <span class="string">&#x27;提交第一回&#x27;</span></span><br><span class="line">commit 7888de9abcb7c530b5d3d80f7e9fadc0cfd5ce37</span><br><span class="line">Author: Jia &lt;326403872@qq.com&gt;</span><br><span class="line">Date:   Wed Dec 18 20:37:05 2024 +0800</span><br><span class="line">    <span class="string">&#x27;书名起好&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>第三天写完代码后可以通过 <code>git diff</code> 来查看当前代码和上一次提交的代码有什么区别</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff  <span class="comment"># 查看当前代码和上一次提交的代码有什么区别</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\jzl\Desktop\git&gt;git diff</span><br><span class="line">diff --git a/xyj.html b/xyj.html</span><br><span class="line">index da5aa2e..0e09ac8 100644</span><br><span class="line">--- a/xyj.html</span><br><span class="line">+++ b/xyj.html</span><br><span class="line">@@ -8,5 +8,6 @@</span><br><span class="line"> &lt;body&gt;</span><br><span class="line">      &lt;h1&gt;第一回 灵根育孕源流出,心性修持大道生&lt;/h1&gt;</span><br><span class="line">      &lt;h2&gt;第二回 悟彻菩提真妙理,断魔归本合元神&lt;/h2&gt;</span><br><span class="line">+    &lt;h3&gt;第三回 四海千山皆拱伏,九幽十类尽除名&lt;/h3&gt;</span><br><span class="line"> &lt;/body&gt;</span><br><span class="line"> &lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>当写完第三天的代码后，执行 <code>git add .</code> 追踪，执行 <code>git commit -m &#39;第三天提交&#39;</code></li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span> --pretty=oneline   <span class="comment"># 提交完第三回后，以一行的方式来输出提交记录</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">f532a3fa8bd1933156a6ee50829bf36f3ee98ed2 (HEAD -&gt; master) <span class="string">&#x27;第三回完&#x27;</span></span><br><span class="line">0157838514b1bdc0bdd86c80663dac6af9207445 <span class="string">&#x27;第二回完&#x27;</span></span><br><span class="line">91f9713831c352c1373fd87c1a176973c1bab48c <span class="string">&#x27;提交第一回&#x27;</span></span><br><span class="line">7888de9abcb7c530b5d3d80f7e9fadc0cfd5ce37 <span class="string">&#x27;书名起好&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="将代码回退到某个版本"><a href="#将代码回退到某个版本" class="headerlink" title="将代码回退到某个版本"></a>将代码回退到某个版本</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard 91f9713831c352c1373fd87c1a176973c1bab48c </span><br><span class="line"><span class="comment"># 将代码回退到某个版本，如果你发现之前写的代码是有问题的不想要了，可以使用该命令将代码版本回退到你指定的位置</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>只回退代码的版本信息，不回退代码</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git reset --soft 91f9713831c352c1373fd87c1a176973c1bab48c </span><br><span class="line"><span class="comment"># 只回退代码的版本信息，不回退代码</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><p>（在自己的分支中写东西，不能去别人的分支写东西）</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 因为代码可能有多个人去写，所以我们将所有的代码要合并到一起去</span></span><br><span class="line"><span class="comment"># 这些人写代码都需要在自己的分支中写东西</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch  <span class="comment"># 用来查看当前所有分支和当前所在分支，并且可以创建分支</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\jzl\Desktop\git&gt;git branch</span><br><span class="line">* master </span><br></pre></td></tr></table></figure>
+
+<p>带有 <code>*</code> 号的分支表示当前所在的分支，master 是我们的主分支</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch cxq   <span class="comment"># 创建一个曹雪芹的分支</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout cxq  <span class="comment"># 将分支切换到 cxq 分支中</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\jzl\Desktop\git&gt;git branch</span><br><span class="line">* cxq</span><br><span class="line">  master</span><br><span class="line">C:\Users\jzl\Desktop\git&gt;git add .</span><br><span class="line">C:\Users\jzl\Desktop\git&gt;git commit -m <span class="string">&#x27;cxq第四回&#x27;</span></span><br><span class="line">[cxq f8bf422] <span class="string">&#x27;cxq第四回&#x27;</span></span><br><span class="line"> 1 file changed, 10 insertions(+), 7 deletions(-)</span><br><span class="line">C:\Users\jzl\Desktop\git&gt;git <span class="built_in">log</span> --pretty=oneline</span><br><span class="line">f8bf42262b56d16dea5d87870d238ad07a646a5b (HEAD -&gt; cxq) <span class="string">&#x27;cxq第四回&#x27;</span></span><br><span class="line">91f9713831c352c1373fd87c1a176973c1bab48c (master) <span class="string">&#x27;提交第一回&#x27;</span></span><br><span class="line">7888de9abcb7c530b5d3d80f7e9fadc0cfd5ce37 <span class="string">&#x27;书名起好&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>cxq 写完第四回，然后提交第四回</p>
+<p>将分支切换到 master 分支后，并没有 cxq 分支中的代码</p>
+<p>因为我们分支切换（<code>git checkout master</code>）到 master 分支后，并没有将 cxq 分支的代码合并过来，所以我们主分支中就没有看到 cxq 的代码</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge cxq  <span class="comment"># 合并 cxq 分支中的代码</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\jzl\Desktop\git&gt;git branch</span><br><span class="line">* master</span><br><span class="line">C:\Users\jzl\Desktop\git&gt;git branch cxq</span><br><span class="line">C:\Users\jzl\Desktop\git&gt;git branch</span><br><span class="line">  cxq</span><br><span class="line">* master</span><br><span class="line">C:\Users\jzl\Desktop\git&gt;git checkout cxq</span><br><span class="line">M       xyj.html</span><br><span class="line">Switched to branch &#x27;cxq&#x27;</span><br><span class="line">C:\Users\jzl\Desktop\git&gt;git branch</span><br><span class="line">* cxq</span><br><span class="line">  master</span><br><span class="line">C:\Users\jzl\Desktop\git&gt;git add .</span><br><span class="line">C:\Users\jzl\Desktop\git&gt;git commit -m &#x27;cxq第四回&#x27;</span><br><span class="line">[cxq f8bf422] &#x27;cxq第四回&#x27;</span><br><span class="line"> 1 file changed, 10 insertions(+), 7 deletions(-)</span><br><span class="line">C:\Users\jzl\Desktop\git&gt;git log --pretty=oneline</span><br><span class="line">f8bf42262b56d16dea5d87870d238ad07a646a5b (HEAD -&gt; cxq) &#x27;cxq第四回&#x27;</span><br><span class="line">91f9713831c352c1373fd87c1a176973c1bab48c (master) &#x27;提交第一回&#x27;</span><br><span class="line">7888de9abcb7c530b5d3d80f7e9fadc0cfd5ce37 &#x27;书名起好&#x27;</span><br><span class="line">C:\Users\jzl\Desktop\git&gt;git checkout master</span><br><span class="line">Switched to branch &#x27;master&#x27;</span><br><span class="line">C:\Users\jzl\Desktop\git&gt;git branch</span><br><span class="line">  cxq</span><br><span class="line">* master</span><br><span class="line">C:\Users\jzl\Desktop\git&gt;git merge cxq</span><br><span class="line">Updating 91f9713..f8bf422</span><br><span class="line">Fast-forward</span><br><span class="line"> xyj.html | 17 ++++++++++-------</span><br><span class="line"> 1 file changed, 10 insertions(+), 7 deletions(-)</span><br></pre></td></tr></table></figure>
+
+<p>假设有 a、b、c 三个人都在写代码，下班前 a、b、c 三人都将自己的代码进行提交，提交完成之后由主分支（master）一一合并</p>
+<h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 老吴准备出去旅游，但是同时在旅游时也想写写书，但是又不想带东西</span></span><br><span class="line"><span class="comment"># 于是老吴找了一天一夜终于找到了一个可以托管代码的平台，叫 GitHub</span></span><br><span class="line"><span class="comment"># GitHub 是一个国外的代码托管平台，是纯英文的，老吴的英语又不好，而且是国外的服务器，速度非常慢，所以在国内用不太友好</span></span><br><span class="line"><span class="comment"># 于是乎，老吴又找了一天一夜，终于发现国内有一个和 GitHub 具有一样功能的托管平台，不仅服务器是国内的，而且还是中文的，速度又快，该平台叫码云 Gitee</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Gitee 地址: <span class="exturl" data-url="aHR0cHM6Ly9naXRlZS5jb20vanpsMzUzNg==">https://gitee.com/jzl3536<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+<h2 id="远程仓库的操作"><a href="#远程仓库的操作" class="headerlink" title="远程仓库的操作"></a>远程仓库的操作</h2><ol>
+<li>在远程仓库中新建一个仓库</li>
+<li>将远程仓库克隆到本地：<code>git clone https://gitee.com/jzl3536/myxyj2218.git</code></li>
+<li>如果是一个私有项目，clone 时候需要账号密码；如果是一个开源项目，clone 时候不需要账号密码</li>
+<li>开始写代码，创建一个项目，进入项目安装 node 包，然后将项目跑起来</li>
+<li>cd 到有 .git 文件的目录下，执行命令 <code>git add .</code> 先追踪所有文件</li>
+<li>提交文件：<code>git commit -m &#39;项目创建成功&#39;</code>，这里提交的是提交到本地</li>
+<li>执行命令 <code>git push</code> 将本地的最新代码提交到远程仓库</li>
+</ol>
+<h2 id="每天写代码之前先-git-pull"><a href="#每天写代码之前先-git-pull" class="headerlink" title="每天写代码之前先 git pull"></a>每天写代码之前先 git pull</h2><p>先执行命令 <code>git pull</code> 将远程仓库中最新的代码拉下来</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># git pull 将远程仓库中最新的代码拉下来</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="多人合作开发"><a href="#多人合作开发" class="headerlink" title="多人合作开发"></a>多人合作开发</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 先在 gitee 库中创建多个分支 a, b, c, zhangsan</span></span><br><span class="line"><span class="comment"># 然后 git clone 项目到本地</span></span><br><span class="line"><span class="comment"># 切换到 a 分支写代码，写完代码后提交 </span></span><br><span class="line"><span class="comment">#     git add . </span></span><br><span class="line"><span class="comment">#     git commit -m &#x27;a分支提交初始化代码&#x27;</span></span><br><span class="line"><span class="comment">#     git push</span></span><br><span class="line"><span class="comment"># 提交完后刷新页面，gitee 库中 a 分支代码会同步更新</span></span><br><span class="line"><span class="comment"># (注意: 每个人写的代码提交完之后别的分支的人是看不到的)</span></span><br><span class="line"><span class="comment"># 提交成功后切换到主分支</span></span><br><span class="line"><span class="comment"># 使用主分支来合并 a 分支，合并完之后直接执行 git push 命令即可</span></span><br><span class="line"><span class="comment"># 将主分支的代码 git push 提交到远程仓库</span></span><br><span class="line"><span class="comment"># 在 gitee 切换到 b, c, zhangsan 分支发现代码不是最新代码</span></span><br><span class="line"><span class="comment"># 然后在 b, c, zhangsan 分支中同步 master 分支的代码，同步完之后，此时所有分支的代码都是最新的代码</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 所以在每天写代码之前，一定要执行 git pull 来拉取最新代码</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># a 在第五行提交了代码</span></span><br><span class="line"><span class="comment"># b 也在第五行提交了代码</span></span><br><span class="line"><span class="comment"># (注意: 多个人修改了同一文件中的同一行代码，并且提交的代码是不一样的)，此时合并分支的时候就会遇到代码冲突</span></span><br></pre></td></tr></table></figure>
+
+<p><img data-src="/images/image-20241220014046500.png" alt="代码冲突示例"></p>
+<h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2><p>解决冲突有三种方法：</p>
+<ul>
+<li><ol>
+<li>保留原有代码</li>
+</ol>
+</li>
+</ul>
+<p><img data-src="/images/image-20241220014059320.png" alt="保留原有代码"></p>
+<ul>
+<li><ol start="2">
+<li>使用最新代码</li>
+</ol>
+</li>
+</ul>
+<p><img data-src="/images/image-20241220014116770.png" alt="使用最新代码"></p>
+<ul>
+<li><ol start="3">
+<li>保留双方的代码</li>
+</ol>
+</li>
+</ul>
+<p><img data-src="/images/image-20241220014135392.png" alt="保留双方代码"></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在实际开发中，会将两个人叫到一块，大家商量一下代码如何保留</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 由主分支重新提交，将最新的代码提交到远程仓库，切换到其他分支进行同步即可</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://your-domain.com/posts/16107/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.svg">
+      <meta itemprop="name" content="Mr Jia">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr Jia's Blog">
+      <meta itemprop="description" content="一个专注于技术分享与生活记录的个人博客，涵盖前端开发、后端技术、编程经验、工具推荐等内容">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Mr Jia's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/16107/" class="post-title-link" itemprop="url">Hello World</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-07-16 01:31:06 / 修改时间：03:30:29" itemprop="dateCreated datePublished" datetime="2026-07-16T01:31:06+08:00">2026-07-16</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Welcome to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvLw==">Hexo<i class="fa fa-external-link-alt"></i></span>! This is your very first post. Check <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv">documentation<i class="fa fa-external-link-alt"></i></span> for more info. If you get any problems when using Hexo, you can find the answer in <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=">troubleshooting<i class="fa fa-external-link-alt"></i></span> or you can ask me on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==">GitHub<i class="fa fa-external-link-alt"></i></span>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s">Writing<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=">Server<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s">Generating<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s">Deployment<i class="fa fa-external-link-alt"></i></span></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2024 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fas fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Mr Jia</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fas fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fas fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
+
+
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL2p6bDAw" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+
+<div class="page-loader" id="pageLoader">
+  <div class="loader-content">
+    <div class="loader-spinner"></div>
+    <div class="loader-text">LOADING</div>
+  </div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  // ========================================
+  // 页面加载完成后隐藏加载动画
+  // ========================================
+  function hidePageLoader() {
+    const loader = document.getElementById('pageLoader');
+    if (loader) {
+      loader.style.opacity = '0';
+      loader.style.visibility = 'hidden';
+      setTimeout(function() {
+        loader.remove();
+      }, 500);
+    }
+  }
+  
+  if (document.readyState === 'complete') {
+    setTimeout(hidePageLoader, 100);
+  } else {
+    window.addEventListener('load', function() {
+      setTimeout(hidePageLoader, 300);
+    });
+    // 兜底：3秒后强制隐藏
+    setTimeout(hidePageLoader, 3000);
+  }
+
+  // ========================================
+  // 鼠标点击特效 - 爱心爆炸
+  // ========================================
+  const colors = ['#6366f1', '#ec4899', '#10b981', '#f59e0b', '#3b82f6', '#ef4444'];
+  
+  function createClickEffect(x, y) {
+    const count = 8;
+    for (let i = 0; i < count; i++) {
+      const particle = document.createElement('div');
+      const angle = (Math.PI * 2 * i) / count;
+      const velocity = 3 + Math.random() * 3;
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      
+      particle.style.cssText = `
+        position: fixed;
+        left: ${x}px;
+        top: ${y}px;
+        width: 8px;
+        height: 8px;
+        background: ${color};
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 99999;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 6px ${color};
+      `;
+      
+      document.body.appendChild(particle);
+      
+      let vx = Math.cos(angle) * velocity;
+      let vy = Math.sin(angle) * velocity;
+      let opacity = 1;
+      let scale = 1;
+      
+      function animate() {
+        x += vx;
+        y += vy;
+        vy += 0.1; // 重力
+        opacity -= 0.02;
+        scale -= 0.01;
+        
+        if (opacity <= 0) {
+          particle.remove();
+          return;
+        }
+        
+        particle.style.left = x + 'px';
+        particle.style.top = y + 'px';
+        particle.style.opacity = opacity;
+        particle.style.transform = `translate(-50%, -50%) scale(${Math.max(0, scale)})`;
+        
+        requestAnimationFrame(animate);
+      }
+      
+      requestAnimationFrame(animate);
+    }
+  }
+
+  document.addEventListener('click', function(e) {
+    // 避免在按钮、链接等交互元素上触发太多粒子
+    if (e.target.closest('a, button, input, textarea, .search-popup, .copy-btn')) return;
+    createClickEffect(e.clientX, e.clientY);
+  });
+
+  // ========================================
+  // 标题动态切换效果
+  // ========================================
+  const originalTitle = document.title;
+  const titleMessages = [
+    { title: '👋 欢迎回来！', timeout: 2000 },
+    { title: originalTitle, timeout: 0 }
+  ];
+  
+  let titleIndex = 0;
+  let titleTimer = null;
+
+  document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+      clearTimeout(titleTimer);
+      document.title = '💔 等等我呀~';
+    } else {
+      document.title = '🎉 欢迎回来！';
+      titleTimer = setTimeout(function() {
+        document.title = originalTitle;
+      }, 2000);
+    }
+  });
+
+  // ========================================
+  // 平滑滚动增强
+  // ========================================
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === '#' || href.length <= 1) return;
+      
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        const headerOffset = 80;
+        const elementPosition = target.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  // ========================================
+  // 图片懒加载占位符效果
+  // ========================================
+  if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.classList.add('img-loaded');
+          imageObserver.unobserve(img);
+        }
+      });
+    }, {
+      rootMargin: '50px 0px'
+    });
+
+    document.querySelectorAll('img').forEach(function(img) {
+      imageObserver.observe(img);
+    });
+  }
+
+  // ========================================
+  // 滚动显示动画
+  // ========================================
+  setTimeout(function() {
+    document.querySelectorAll('.post').forEach(function(post, index) {
+      post.style.opacity = '1';
+      post.style.transform = 'translateY(0)';
+      post.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+    });
+  }, 100);
+
+  // ========================================
+  // 代码块复制成功提示增强
+  // ========================================
+  const originalCopy = document.querySelector('.copy-btn');
+  if (originalCopy) {
+    const style = document.createElement('style');
+    style.textContent = `
+      .copy-btn.copied {
+        background: #10b981 !important;
+        color: white !important;
+      }
+      .copy-btn.copied::after {
+        content: '已复制!';
+        position: absolute;
+        right: 100%;
+        margin-right: 8px;
+        padding: 4px 8px;
+        background: #10b981;
+        color: white;
+        border-radius: 4px;
+        font-size: 12px;
+        white-space: nowrap;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  // ========================================
+  // 阅读进度条增强
+  // ========================================
+  function updateReadingProgress() {
+    const progressBar = document.querySelector('.reading-progress-bar');
+    if (!progressBar) return;
+    
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = window.scrollY;
+    const progress = Math.max(0, Math.min(100, (scrolled / docHeight) * 100));
+    
+    progressBar.style.width = progress + '%';
+  }
+
+  window.addEventListener('scroll', updateReadingProgress, { passive: true });
+  updateReadingProgress();
+
+  // ========================================
+  // 导航栏滚动效果
+  // ========================================
+  let lastScroll = 0;
+  const header = document.querySelector('.header-inner');
+  
+  window.addEventListener('scroll', function() {
+    const currentScroll = window.scrollY;
+    
+    if (header) {
+      if (currentScroll > 100) {
+        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
+      } else {
+        header.style.boxShadow = 'none';
+      }
+    }
+    
+    lastScroll = currentScroll;
+  }, { passive: true });
+
+  // ========================================
+  // 暗黑模式切换按钮增强
+  // ========================================
+  const darkmodeToggle = document.querySelector('.darkmode-toggle');
+  if (darkmodeToggle) {
+    darkmodeToggle.addEventListener('click', function() {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      
+      // 添加切换动画
+      document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
+      setTimeout(function() {
+        document.body.style.transition = '';
+      }, 300);
+    });
+  }
+
+  // ========================================
+  // 控制台彩蛋
+  // ========================================
+  console.log('%c 🚀 Mr Jia\'s Blog ', 'background: linear-gradient(135deg, #6366f1, #ec4899); color: white; font-size: 20px; font-weight: bold; padding: 10px 20px; border-radius: 8px; margin: 20px 0;');
+  console.log('%c 欢迎来到我的技术博客！', 'color: #6366f1; font-size: 14px; font-weight: 500;');
+  console.log('%c 如果你对代码感兴趣，欢迎访问我的 GitHub: https://github.com/jzl00', 'color: #6b7280; font-size: 12px;');
+
+  // ========================================
+  // Pjax 页面切换后重新初始化
+  // ========================================
+  document.addEventListener('pjax:success', function() {
+    // 重新绑定事件
+    document.querySelectorAll('.post').forEach(function(post, index) {
+      post.style.opacity = '0';
+      post.style.transform = 'translateY(30px)';
+      post.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+      setTimeout(function() {
+        post.style.opacity = '1';
+        post.style.transform = 'translateY(0)';
+      }, 50);
+    });
+    
+    updateReadingProgress();
+  });
+
+})();
+</script>
+
+
+<script>
+(function() {
+  'use strict';
+  
+  // 检测是否为移动设备，移动端不启用
+  if ('ontouchstart' in window || navigator.maxTouchPoints > 0) return;
+  
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  canvas.style.cssText = 'position:fixed;top:0;left:0;pointer-events:none;z-index:9998;';
+  document.body.appendChild(canvas);
+  
+  let width = canvas.width = window.innerWidth;
+  let height = canvas.height = window.innerHeight;
+  let particles = [];
+  let mouseX = 0;
+  let mouseY = 0;
+  
+  window.addEventListener('resize', function() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  });
+  
+  document.addEventListener('mousemove', function(e) {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    
+    for (let i = 0; i < 2; i++) {
+      particles.push({
+        x: mouseX,
+        y: mouseY,
+        vx: (Math.random() - 0.5) * 2,
+        vy: (Math.random() - 0.5) * 2,
+        life: 1,
+        size: Math.random() * 3 + 1,
+        color: Math.random() > 0.5 ? '#6366f1' : '#ec4899'
+      });
+    }
+  });
+  
+  function animate() {
+    ctx.clearRect(0, 0, width, height);
+    
+    particles = particles.filter(function(p) {
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= 0.02;
+      p.size *= 0.98;
+      
+      if (p.life <= 0) return false;
+      
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.globalAlpha = p.life * 0.6;
+      ctx.fill();
+      
+      return true;
+    });
+    
+    requestAnimationFrame(animate);
+  }
+  
+  animate();
+})();
+</script>
+
+
+<style>
+  img {
+    transition: opacity 0.4s ease, transform 0.3s ease;
+  }
+  img:not(.img-loaded) {
+    opacity: 0;
+  }
+  img.img-loaded {
+    opacity: 1;
+  }
+  
+  /* 选中文字美化 */
+  ::selection {
+    background: rgba(99, 102, 241, 0.2);
+    color: #4f46e5;
+  }
+  
+  /* 工具提示样式 */
+  [data-tooltip] {
+    position: relative;
+  }
+  [data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 12px;
+    background: #1f2937;
+    color: white;
+    font-size: 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+    z-index: 1000;
+    margin-bottom: 8px;
+  }
+</style>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/Epsilon2.1.model.json"},"display":{"position":"right","width":140,"height":280,"hOffset":20,"vOffset":20},"mobile":{"show":false},"react":{"opacity":0.8}});</script></body>
+</html>

@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1d1d1f" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/favicon.ico" color="#ffffff">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=-apple-system:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=BlinkMacSystemFont:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family='Segoe+UI':ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family='Helvetica+Neue':ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Arial:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=sans-serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family='PingFang+SC':ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family='Microsoft+YaHei':ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family='JetBrains+Mono':ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family='Fira+Code':ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Consolas:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Monaco:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=monospace:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/#6366f1/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous" defer></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"your-domain.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.28.0","exturl":true,"sidebar":{"position":"left","width_expanded":300,"width_dual_column":240,"display":"post","padding":20,"offset":12,"onmobile":"push"},"hljswrap":true,"codeblock":{"theme":{"light":"github","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":600},"language":true},"bookmark":{"enable":true,"color":"#6366f1","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeInUp","post_header":"fadeInDown","post_body":"fadeIn","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":3,"unescape":false,"preload":true,"trigger":"auto"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="Vue 介绍渐进式框架：可以用最简单的方式直接导入 vue.js 使用，随着项目变大，可以逐步集成周边插件。  版本：Vue 3 学习方式：选项式 API 官网：https:&#x2F;&#x2F;cn.vuejs.org&#x2F; CDN 地址：https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js  Vue 接入步骤 下载 vue.js 文件 在 html 中引入 创建 Vue 实例 挂载到">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue3 基础教程（选项式 API）">
+<meta property="og:url" content="https://your-domain.com/posts/25731/">
+<meta property="og:site_name" content="Mr Jia&#39;s Blog">
+<meta property="og:description" content="Vue 介绍渐进式框架：可以用最简单的方式直接导入 vue.js 使用，随着项目变大，可以逐步集成周边插件。  版本：Vue 3 学习方式：选项式 API 官网：https:&#x2F;&#x2F;cn.vuejs.org&#x2F; CDN 地址：https:&#x2F;&#x2F;unpkg.com&#x2F;vue@3&#x2F;dist&#x2F;vue.global.js  Vue 接入步骤 下载 vue.js 文件 在 html 中引入 创建 Vue 实例 挂载到">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-07-16T07:40:00.000Z">
+<meta property="article:modified_time" content="2026-07-16T02:03:49.263Z">
+<meta property="article:author" content="Mr Jia">
+<meta property="article:tag" content="Vue3">
+<meta property="article:tag" content="前端框架">
+<meta property="article:tag" content="基础教程">
+<meta name="twitter:card" content="summary_large_image">
+
+
+<link rel="canonical" href="https://your-domain.com/posts/25731/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://your-domain.com/posts/25731/","path":"posts/25731/","title":"Vue3 基础教程（选项式 API）"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Vue3 基础教程（选项式 API） | Mr Jia's Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.1.0/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/7.2.0/pangu.umd.js" integrity="sha256-JnmRRnJK7DC6RQJbAJb6AXOM9OmWzS6z8eYultk/48Y=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.10.1/mermaid.min.js","integrity":"sha256-BmQmdWDS8X2OTbrwELWK366LV6escyWhHHe0XCTU/Hk="}}</script>
+  <script src="/js/third-party/tags/mermaid.js" defer></script>
+
+
+
+  <script src="/js/third-party/pace.js" defer></script>
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="/js/third-party/math/katex.js" defer></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/3.0.1/quicklink.umd.js" integrity="sha256-44BednzIpUeQJcY8qtLyarFu0UCCTbgmWOvaoehiFQQ=" crossorigin="anonymous" defer></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"ignores":[],"url":"https://your-domain.com/posts/25731/"}</script>
+  <script src="/js/third-party/quicklink.js" defer></script>
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+
+
+<meta name="theme-color" content="#6366f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1d1d1f" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="format-detection" content="telephone=no">
+
+
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+
+<link rel="alternate" href="/atom.xml" title="Mr Jia's Blog" type="application/atom+xml">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Mr Jia's Blog",
+  "description": "记录生活，分享技术",
+  "url": "https://your-domain.com",
+  "author": {
+    "@type": "Person",
+    "name": "Mr Jia",
+    "url": "https://github.com/jzl00"
+  }
+}
+</script>
+
+
+<script>
+  (function() {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      document.documentElement.classList.add('dark');
+    }
+  })();
+</script>
+
+<style>
+  /* 页面加载动画 */
+  .page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+  .page-loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .loader-content {
+    text-align: center;
+    color: white;
+  }
+  .loader-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+  }
+  .loader-text {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    opacity: 0.9;
+  }
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+</style>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Mr Jia's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">记录生活，分享技术</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fas fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fas fa-archive fa-fw"></i>归档<span class="badge">16</span></a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fas fa-tags fa-fw"></i>标签<span class="badge">31</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fas fa-folder-open fa-fw"></i>分类<span class="badge">2</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fas fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">Vue 介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-%E6%8E%A5%E5%85%A5%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.</span> <span class="nav-text">Vue 接入步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">模板语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8C%E5%A4%A7%E6%8B%AC%E5%8F%B7%E6%8F%92%E5%80%BC"><span class="nav-number">3.1.</span> <span class="nav-text">双大括号插值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4"><span class="nav-number">3.2.</span> <span class="nav-text">常用指令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text">响应式原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7-computed"><span class="nav-number">5.</span> <span class="nav-text">计算属性 (computed)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E7%82%B9"><span class="nav-number">5.1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E5%86%99%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7"><span class="nav-number">5.2.</span> <span class="nav-text">可写计算属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BE%A6%E5%90%AC%E5%99%A8-watch"><span class="nav-number">6.</span> <span class="nav-text">侦听器 (watch)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E7%82%B9-1"><span class="nav-number">6.1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#watch-vs-computed-%E5%AF%B9%E6%AF%94"><span class="nav-number">6.2.</span> <span class="nav-text">watch vs computed 对比</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Class-%E5%92%8C-Style-%E7%BB%91%E5%AE%9A"><span class="nav-number">7.</span> <span class="nav-text">Class 和 Style 绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Class-%E7%BB%91%E5%AE%9A"><span class="nav-number">7.1.</span> <span class="nav-text">Class 绑定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Style-%E7%BB%91%E5%AE%9A"><span class="nav-number">7.2.</span> <span class="nav-text">Style 绑定</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93"><span class="nav-number">8.</span> <span class="nav-text">条件渲染</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#v-if-v-else-if-v-else"><span class="nav-number">8.1.</span> <span class="nav-text">v-if &#x2F; v-else-if &#x2F; v-else</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v-show"><span class="nav-number">8.2.</span> <span class="nav-text">v-show</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E6%B8%B2%E6%9F%93-v-for"><span class="nav-number">9.</span> <span class="nav-text">列表渲染 v-for</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E9%81%8D%E5%8E%86%E7%B1%BB%E5%9E%8B"><span class="nav-number">9.1.</span> <span class="nav-text">可遍历类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#key-%E5%B1%9E%E6%80%A7"><span class="nav-number">9.2.</span> <span class="nav-text">key 属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v-if-%E5%92%8C-v-for-%E4%BC%98%E5%85%88%E7%BA%A7"><span class="nav-number">9.3.</span> <span class="nav-text">v-if 和 v-for 优先级</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86"><span class="nav-number">10.</span> <span class="nav-text">事件处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="nav-number">10.1.</span> <span class="nav-text">两种方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="nav-number">10.2.</span> <span class="nav-text">事件修饰符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%AE%E7%9B%98%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="nav-number">10.3.</span> <span class="nav-text">键盘修饰符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E5%8D%95%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A-v-model"><span class="nav-number">11.</span> <span class="nav-text">表单双向绑定 v-model</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="nav-number">11.1.</span> <span class="nav-text">修饰符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%EF%BC%88%E9%80%89%E9%A1%B9%E5%BC%8F-8-%E4%B8%AA%EF%BC%89"><span class="nav-number">12.</span> <span class="nav-text">生命周期（选项式 8 个）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ref-%E5%BC%95%E7%94%A8"><span class="nav-number">13.</span> <span class="nav-text">ref 引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6"><span class="nav-number">14.</span> <span class="nav-text">组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%80%E9%83%A8%E7%BB%84%E4%BB%B6%E6%B3%A8%E5%86%8C"><span class="nav-number">14.1.</span> <span class="nav-text">局部组件注册</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%A8%E5%B1%80%E7%BB%84%E4%BB%B6%E6%B3%A8%E5%86%8C"><span class="nav-number">14.2.</span> <span class="nav-text">全局组件注册</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E5%91%BD%E5%90%8D%E6%96%B9%E5%BC%8F"><span class="nav-number">14.3.</span> <span class="nav-text">组件命名方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E6%9D%BF%E8%A7%A3%E6%9E%90%E6%B3%A8%E6%84%8F"><span class="nav-number">14.4.</span> <span class="nav-text">模板解析注意</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Props-%E7%88%B6%E4%BC%A0%E5%AD%90"><span class="nav-number">15.</span> <span class="nav-text">Props 父传子</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E5%90%91%E6%95%B0%E6%8D%AE%E6%B5%81"><span class="nav-number">15.1.</span> <span class="nav-text">单向数据流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7%E9%AA%8C%E8%AF%81"><span class="nav-number">15.2.</span> <span class="nav-text">属性验证</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BA%8B%E4%BB%B6%EF%BC%88%E5%AD%90%E4%BC%A0%E7%88%B6%EF%BC%89"><span class="nav-number">16.</span> <span class="nav-text">自定义事件（子传父）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5%EF%BC%88%E7%A5%96%E5%85%88%E4%BC%A0%E5%90%8E%E4%BB%A3%EF%BC%89"><span class="nav-number">17.</span> <span class="nav-text">依赖注入（祖先传后代）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7%E9%80%8F%E4%BC%A0-attrs"><span class="nav-number">18.</span> <span class="nav-text">属性透传 $attrs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%92%E6%A7%BD-Slot"><span class="nav-number">19.</span> <span class="nav-text">插槽 Slot</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%BB%98%E8%AE%A4%E6%8F%92%E6%A7%BD"><span class="nav-number">19.1.</span> <span class="nav-text">默认插槽</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B7%E5%90%8D%E6%8F%92%E6%A7%BD"><span class="nav-number">19.2.</span> <span class="nav-text">具名插槽</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%8F%92%E6%A7%BD"><span class="nav-number">19.3.</span> <span class="nav-text">作用域插槽</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%82%E6%AD%A5%E7%BB%84%E4%BB%B6"><span class="nav-number">20.</span> <span class="nav-text">异步组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4"><span class="nav-number">21.</span> <span class="nav-text">自定义指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%A8%E9%83%A8%E6%8C%87%E4%BB%A4%E6%B1%87%E6%80%BB"><span class="nav-number">22.</span> <span class="nav-text">全部指令汇总</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6"><span class="nav-number">23.</span> <span class="nav-text">动态组件</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Mr Jia"
+      src="/images/avatar.svg">
+  <p class="site-author-name" itemprop="name">Mr Jia</p>
+  <div class="site-description" itemprop="description">一个专注于技术分享与生活记录的个人博客，涵盖前端开发、后端技术、编程经验、工具推荐等内容</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2p6bDAw" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jzl00"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjMyNjQwMzg3MkBxcS5jb20=" title="E-Mail → mailto:326403872@qq.com"><i class="fas fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvIHx8IEhleG/lrpjnvZE=" title="https:&#x2F;&#x2F;hexo.io || Hexo官网">Hexo</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZyB8fCBOZXhU5Li76aKY" title="https:&#x2F;&#x2F;theme-next.js.org || NexT主题">NexT</span>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://your-domain.com/posts/25731/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.svg">
+      <meta itemprop="name" content="Mr Jia">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr Jia's Blog">
+      <meta itemprop="description" content="一个专注于技术分享与生活记录的个人博客，涵盖前端开发、后端技术、编程经验、工具推荐等内容">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Vue3 基础教程（选项式 API） | Mr Jia's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Vue3 基础教程（选项式 API）
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-07-16 15:40:00 / 修改时间：10:03:49" itemprop="dateCreated datePublished" datetime="2026-07-16T15:40:00+08:00">2026-07-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">前端开发</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="Vue-介绍"><a href="#Vue-介绍" class="headerlink" title="Vue 介绍"></a>Vue 介绍</h2><p><strong>渐进式框架</strong>：可以用最简单的方式直接导入 vue.js 使用，随着项目变大，可以逐步集成周边插件。</p>
+<ul>
+<li><strong>版本</strong>：Vue 3</li>
+<li><strong>学习方式</strong>：选项式 API</li>
+<li><strong>官网</strong>：<span class="exturl" data-url="aHR0cHM6Ly9jbi52dWVqcy5vcmcv">https://cn.vuejs.org/<i class="fa fa-external-link-alt"></i></span></li>
+<li><strong>CDN 地址</strong>：<span class="exturl" data-url="aHR0cHM6Ly91bnBrZy5jb20vdnVlQDMvZGlzdC92dWUuZ2xvYmFsLmpz">https://unpkg.com/vue@3/dist/vue.global.js<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<h2 id="Vue-接入步骤"><a href="#Vue-接入步骤" class="headerlink" title="Vue 接入步骤"></a>Vue 接入步骤</h2><ol>
+<li>下载 vue.js 文件</li>
+<li>在 html 中引入</li>
+<li>创建 Vue 实例</li>
+<li>挂载到页面元素</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// createApp：创建 vue 实例</span></span><br><span class="line"><span class="comment">// mount：挂载到指定元素</span></span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">createApp</span>(&#123; <span class="comment">/* 选项 */</span> &#125;).<span class="title function_">mount</span>(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="模板语法"><a href="#模板语法" class="headerlink" title="模板语法"></a>模板语法</h2><h3 id="双大括号插值"><a href="#双大括号插值" class="headerlink" title="双大括号插值"></a>双大括号插值</h3><p><code>&#123;&#123; 表达式 &#125;&#125;</code> - 可以写 JS 表达式，能取到 data 中的数据</p>
+<h3 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h3><table>
+<thead>
+<tr>
+<th>指令</th>
+<th>作用</th>
+<th>简写</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>v-text</code></td>
+<td>渲染纯文本，不解析标签</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>v-html</code></td>
+<td>渲染 HTML，解析标签</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>v-bind</code></td>
+<td>绑定属性</td>
+<td><code>:</code></td>
+</tr>
+<tr>
+<td><code>v-on</code></td>
+<td>绑定事件</td>
+<td><code>@</code></td>
+</tr>
+<tr>
+<td><code>v-if</code></td>
+<td>条件渲染（添加&#x2F;移除）</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>v-for</code></td>
+<td>列表循环</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<p><strong>动态属性</strong>：<code>:[attr]=&quot;url&quot;</code> 可以动态绑定不同属性</p>
+<h2 id="响应式原理"><a href="#响应式原理" class="headerlink" title="响应式原理"></a>响应式原理</h2><ol>
+<li>虚拟 DOM 本质是一个 JS 对象</li>
+<li>数据改变先更新虚拟 DOM，不直接操作真实 DOM</li>
+<li>通过 <strong>DIFF 算法</strong> 比较新旧虚拟 DOM，只更新变化的部分</li>
+<li><code>nextTick</code> 在真实 DOM 更新后调用</li>
+</ol>
+<blockquote>
+<p>data 必须是函数返回对象：保证每个组件有独立的数据作用域，通过 Proxy 实现响应式</p>
+</blockquote>
+<h2 id="计算属性-computed"><a href="#计算属性-computed" class="headerlink" title="计算属性 (computed)"></a>计算属性 (computed)</h2><h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ol>
+<li>✅ 有缓存</li>
+<li>✅ 立即执行一次</li>
+<li>✅ 监听多个依赖，任一改变就重新计算</li>
+<li>✅ 必须有 return 返回值</li>
+<li>✅ 多个值影响一个值</li>
+</ol>
+<h3 id="可写计算属性"><a href="#可写计算属性" class="headerlink" title="可写计算属性"></a>可写计算属性</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">computed</span>: &#123;</span><br><span class="line">  <span class="attr">fullName</span>: &#123;</span><br><span class="line">    <span class="title function_">get</span>(<span class="params"></span>) &#123; <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">first</span> + <span class="variable language_">this</span>.<span class="property">last</span> &#125;,</span><br><span class="line">    <span class="title function_">set</span>(<span class="params">val</span>) &#123; <span class="comment">/* 修改计算属性 */</span> &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="侦听器-watch"><a href="#侦听器-watch" class="headerlink" title="侦听器 (watch)"></a>侦听器 (watch)</h2><h3 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h3><ol>
+<li>✅ 惰性：默认不立即执行</li>
+<li>✅ 无需返回值</li>
+<li>✅ 支持异步操作</li>
+<li>✅ 没有缓存</li>
+<li>✅ 监听一个值，影响多个值</li>
+</ol>
+<h3 id="watch-vs-computed-对比"><a href="#watch-vs-computed-对比" class="headerlink" title="watch vs computed 对比"></a>watch vs computed 对比</h3><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>computed</th>
+<th>watch</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>立即执行</td>
+<td>✅ 是</td>
+<td>❌ 否（惰性）</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>✅ 需要</td>
+<td>❌ 不需要</td>
+</tr>
+<tr>
+<td>异步</td>
+<td>❌ 不支持</td>
+<td>✅ 支持</td>
+</tr>
+<tr>
+<td>缓存</td>
+<td>✅ 有</td>
+<td>❌ 无</td>
+</tr>
+<tr>
+<td>监听数量</td>
+<td>多个值</td>
+<td>一个值</td>
+</tr>
+<tr>
+<td>场景</td>
+<td>多对一</td>
+<td>一对多</td>
+</tr>
+</tbody></table>
+<h2 id="Class-和-Style-绑定"><a href="#Class-和-Style-绑定" class="headerlink" title="Class 和 Style 绑定"></a>Class 和 Style 绑定</h2><h3 id="Class-绑定"><a href="#Class-绑定" class="headerlink" title="Class 绑定"></a>Class 绑定</h3><ul>
+<li><strong>字符串</strong>：<code>:class=&quot;className&quot;</code></li>
+<li><strong>对象</strong>：<code>:class=&quot;&#123; active: isActive &#125;&quot;</code> 布尔值控制</li>
+<li><strong>数组</strong>：<code>:class=&quot;[classA, classB]&quot;</code></li>
+</ul>
+<blockquote>
+<p>绑定的 class 会和原有的 class 合并</p>
+</blockquote>
+<h3 id="Style-绑定"><a href="#Style-绑定" class="headerlink" title="Style 绑定"></a>Style 绑定</h3><p>同样支持字符串、对象、数组三种方式</p>
+<h2 id="条件渲染"><a href="#条件渲染" class="headerlink" title="条件渲染"></a>条件渲染</h2><h3 id="v-if-v-else-if-v-else"><a href="#v-if-v-else-if-v-else" class="headerlink" title="v-if &#x2F; v-else-if &#x2F; v-else"></a>v-if &#x2F; v-else-if &#x2F; v-else</h3><ul>
+<li>条件成立才渲染，不成立直接移除</li>
+<li>具有惰性</li>
+<li>适合切换不频繁的场景</li>
+</ul>
+<h3 id="v-show"><a href="#v-show" class="headerlink" title="v-show"></a>v-show</h3><ul>
+<li>始终渲染，通过 CSS display 控制显示隐藏</li>
+<li>非惰性</li>
+<li>适合频繁切换的场景</li>
+</ul>
+<h2 id="列表渲染-v-for"><a href="#列表渲染-v-for" class="headerlink" title="列表渲染 v-for"></a>列表渲染 v-for</h2><h3 id="可遍历类型"><a href="#可遍历类型" class="headerlink" title="可遍历类型"></a>可遍历类型</h3><ul>
+<li><strong>数字</strong>：<code>v-for=&quot;num in 10&quot;</code> 从 1 开始</li>
+<li><strong>字符串</strong>：<code>v-for=&quot;str in &#39;你好&#39;&quot;</code> 逐个字符</li>
+<li><strong>数组</strong>：<code>v-for=&quot;(item, index) in arr&quot;</code></li>
+<li><strong>对象</strong>：<code>v-for=&quot;(value, key, index) in obj&quot;</code></li>
+</ul>
+<h3 id="key-属性"><a href="#key-属性" class="headerlink" title="key 属性"></a>key 属性</h3><p>使用 v-for 必须加 key，且唯一。帮助虚拟 DOM 正确识别元素位置，提升 diff 性能。</p>
+<h3 id="v-if-和-v-for-优先级"><a href="#v-if-和-v-for-优先级" class="headerlink" title="v-if 和 v-for 优先级"></a>v-if 和 v-for 优先级</h3><ul>
+<li>Vue 2：for 优先级高于 if</li>
+<li>Vue 3：if 优先级高于 for（条件不成立不循环）</li>
+</ul>
+<blockquote>
+<p>不推荐一起使用</p>
+</blockquote>
+<h2 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h2><h3 id="两种方式"><a href="#两种方式" class="headerlink" title="两种方式"></a>两种方式</h3><ul>
+<li><strong>内联</strong>：<code>@click=&quot;count++&quot;</code></li>
+<li><strong>方法</strong>：<code>@click=&quot;add&quot;</code></li>
+</ul>
+<h3 id="事件修饰符"><a href="#事件修饰符" class="headerlink" title="事件修饰符"></a>事件修饰符</h3><table>
+<thead>
+<tr>
+<th>修饰符</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>.stop</code></td>
+<td>阻止冒泡</td>
+</tr>
+<tr>
+<td><code>.prevent</code></td>
+<td>阻止默认行为</td>
+</tr>
+<tr>
+<td><code>.self</code></td>
+<td>只有点击自身才触发</td>
+</tr>
+<tr>
+<td><code>.capture</code></td>
+<td>捕获阶段触发</td>
+</tr>
+<tr>
+<td><code>.once</code></td>
+<td>只触发一次</td>
+</tr>
+<tr>
+<td><code>.passive</code></td>
+<td>提升移动端滚动性能</td>
+</tr>
+</tbody></table>
+<h3 id="键盘修饰符"><a href="#键盘修饰符" class="headerlink" title="键盘修饰符"></a>键盘修饰符</h3><p><code>.enter</code> <code>.tab</code> <code>.delete</code> <code>.esc</code> <code>.space</code> <code>.up</code> <code>.down</code> <code>.left</code> <code>.right</code></p>
+<h2 id="表单双向绑定-v-model"><a href="#表单双向绑定-v-model" class="headerlink" title="表单双向绑定 v-model"></a>表单双向绑定 v-model</h2><h3 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h3><table>
+<thead>
+<tr>
+<th>修饰符</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>.lazy</code></td>
+<td>change 事件时同步，而非 input</td>
+</tr>
+<tr>
+<td><code>.number</code></td>
+<td>自动转为数字类型</td>
+</tr>
+<tr>
+<td><code>.trim</code></td>
+<td>去除首尾空格</td>
+</tr>
+</tbody></table>
+<h2 id="生命周期（选项式-8-个）"><a href="#生命周期（选项式-8-个）" class="headerlink" title="生命周期（选项式 8 个）"></a>生命周期（选项式 8 个）</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">beforeCreate</span>()   <span class="comment">// 创建之前</span></span><br><span class="line"><span class="title function_">created</span>()        <span class="comment">// 创建完成 —— 可发请求</span></span><br><span class="line"><span class="title function_">beforeMount</span>()    <span class="comment">// 挂载之前</span></span><br><span class="line"><span class="title function_">mounted</span>()        <span class="comment">// 挂载完成 —— 推荐发请求</span></span><br><span class="line"><span class="title function_">beforeUpdate</span>()   <span class="comment">// 更新之前</span></span><br><span class="line"><span class="title function_">updated</span>()        <span class="comment">// 更新完成</span></span><br><span class="line"><span class="title function_">beforeUnmount</span>()  <span class="comment">// 卸载之前</span></span><br><span class="line"><span class="title function_">unmounted</span>()      <span class="comment">// 卸载完成 —— 清理定时器等</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>组合式 API 中 setup 替代 beforeCreate 和 created</p>
+</blockquote>
+<h2 id="ref-引用"><a href="#ref-引用" class="headerlink" title="ref 引用"></a>ref 引用</h2><ul>
+<li>标记 DOM 元素，方便操作原生 DOM</li>
+<li>标记组件，可获取组件实例</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ref</span>=<span class="string">&quot;myDiv&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">myDiv</span>  <span class="comment">// 获取元素</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><h3 id="局部组件注册"><a href="#局部组件注册" class="headerlink" title="局部组件注册"></a>局部组件注册</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 声明组件</span></span><br><span class="line"><span class="keyword">const</span> myCom = &#123;</span><br><span class="line">  <span class="attr">template</span>: <span class="string">`&lt;h1&gt;&#123;&#123;msg&#125;&#125;&lt;/h1&gt;`</span>,</span><br><span class="line">  <span class="title function_">data</span>(<span class="params"></span>) &#123; <span class="keyword">return</span> &#123; <span class="attr">msg</span>: <span class="string">&#x27;hello&#x27;</span> &#125; &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. 注册</span></span><br><span class="line"><span class="attr">components</span>: &#123; <span class="title class_">MyCom</span>: myCom &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3. 使用</span></span><br><span class="line">&lt;<span class="title class_">MyCom</span> /&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="全局组件注册"><a href="#全局组件注册" class="headerlink" title="全局组件注册"></a>全局组件注册</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app.<span class="title function_">component</span>(<span class="string">&#x27;my-button&#x27;</span>, &#123;</span><br><span class="line">  <span class="attr">template</span>: <span class="string">`&lt;button&gt;&#123;&#123;count&#125;&#125;&lt;/button&gt;`</span>,</span><br><span class="line">  <span class="title function_">data</span>(<span class="params"></span>) &#123; <span class="keyword">return</span> &#123; <span class="attr">count</span>: <span class="number">0</span> &#125; &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="组件命名方式"><a href="#组件命名方式" class="headerlink" title="组件命名方式"></a>组件命名方式</h3><ul>
+<li>大驼峰：<code>MyCom</code>（单文件常用）</li>
+<li>小驼峰：<code>myCom</code></li>
+<li>连接符：<code>my-com</code></li>
+<li>全小写：<code>mycom</code></li>
+</ul>
+<h3 id="模板解析注意"><a href="#模板解析注意" class="headerlink" title="模板解析注意"></a>模板解析注意</h3><p><code>&lt;ul&gt;</code> <code>&lt;ol&gt;</code> <code>&lt;table&gt;</code> <code>&lt;select&gt;</code> 内部有限制，可用 <code>is</code> 属性解决：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">tr</span> <span class="attr">is</span>=<span class="string">&quot;vue:row&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Props-父传子"><a href="#Props-父传子" class="headerlink" title="Props 父传子"></a>Props 父传子</h2><ol>
+<li>使用组件时传属性</li>
+<li>子组件 props 接收</li>
+<li>直接使用</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 父组件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">child</span> <span class="attr">:msg</span>=<span class="string">&quot;message&quot;</span> <span class="attr">:age</span>=<span class="string">&quot;18&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">child</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 子组件</span></span><br><span class="line"><span class="attr">props</span>: [<span class="string">&#x27;msg&#x27;</span>, <span class="string">&#x27;age&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="单向数据流"><a href="#单向数据流" class="headerlink" title="单向数据流"></a>单向数据流</h3><p>子组件只能使用，不能直接修改父组件数据。如需修改：</p>
+<ol>
+<li>复制一份自己改</li>
+<li>触发事件通知父组件改</li>
+</ol>
+<h3 id="属性验证"><a href="#属性验证" class="headerlink" title="属性验证"></a>属性验证</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">props</span>: &#123;</span><br><span class="line">  <span class="attr">count</span>: <span class="title class_">Number</span>,                    <span class="comment">// 指定类型</span></span><br><span class="line">  <span class="attr">msg</span>: [<span class="title class_">Number</span>, <span class="title class_">String</span>],            <span class="comment">// 多种类型</span></span><br><span class="line">  <span class="attr">message</span>: &#123; <span class="attr">type</span>: <span class="title class_">String</span>, <span class="attr">required</span>: <span class="literal">true</span> &#125;,  <span class="comment">// 必填</span></span><br><span class="line">  <span class="attr">price</span>: &#123; <span class="attr">type</span>: <span class="title class_">Number</span>, <span class="attr">default</span>: <span class="number">10</span> &#125;,       <span class="comment">// 默认值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="自定义事件（子传父）"><a href="#自定义事件（子传父）" class="headerlink" title="自定义事件（子传父）"></a>自定义事件（子传父）</h2><ol>
+<li>父组件定义接收方法</li>
+<li>监听自定义事件</li>
+<li>子组件 <code>$emit</code> 触发事件并传参</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 子组件</span></span><br><span class="line"><span class="variable language_">this</span>.$emit(<span class="string">&#x27;calc&#x27;</span>, data)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 父组件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">child</span> @<span class="attr">calc</span>=<span class="string">&quot;handleCalc&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">child</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="依赖注入（祖先传后代）"><a href="#依赖注入（祖先传后代）" class="headerlink" title="依赖注入（祖先传后代）"></a>依赖注入（祖先传后代）</h2><ul>
+<li><code>provide</code>：祖先组件暴露数据</li>
+<li><code>inject</code>：后代组件注入数据</li>
+</ul>
+<p>跨多层级传递时使用，避免 props 逐层传递。</p>
+<h2 id="属性透传-attrs"><a href="#属性透传-attrs" class="headerlink" title="属性透传 $attrs"></a>属性透传 $attrs</h2><p>组件上的 id、class、style 等属性会自动透传到根标签。</p>
+<ul>
+<li>多根标签时需手动指定</li>
+<li>props 接收过的属性不会透传</li>
+</ul>
+<h2 id="插槽-Slot"><a href="#插槽-Slot" class="headerlink" title="插槽 Slot"></a>插槽 Slot</h2><p>用于内容分发，组件中预留位置，使用时传入内容。</p>
+<h3 id="默认插槽"><a href="#默认插槽" class="headerlink" title="默认插槽"></a>默认插槽</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 子组件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 父组件使用 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">my-com</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>插入的内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">my-com</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="具名插槽"><a href="#具名插槽" class="headerlink" title="具名插槽"></a>具名插槽</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 子组件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;header&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 父组件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">v-slot:header</span>&gt;</span></span><br><span class="line">  头部内容</span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>简写：<code>#header</code></p>
+</blockquote>
+<h3 id="作用域插槽"><a href="#作用域插槽" class="headerlink" title="作用域插槽"></a>作用域插槽</h3><p>子组件数据传给父组件插槽使用：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 子组件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">slot</span> <span class="attr">:count</span>=<span class="string">&quot;count&quot;</span> <span class="attr">message</span>=<span class="string">&quot;你好&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 父组件接收 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">v-slot:default</span>=<span class="string">&quot;data&quot;</span>&gt;</span></span><br><span class="line">  &#123;&#123; data.count &#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="异步组件"><a href="#异步组件" class="headerlink" title="异步组件"></a>异步组件</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Vue</span>.<span class="title function_">defineAsyncComponent</span>(<span class="function">() =&gt;</span> <span class="keyword">import</span>(<span class="string">&#x27;./MyCom.vue&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<p>用于不确定何时加载完成的组件，如从服务器获取。</p>
+<h2 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">directives</span>: &#123;</span><br><span class="line">  <span class="attr">foc</span>: &#123;</span><br><span class="line">    <span class="title function_">mounted</span>(<span class="params">el, binding</span>) &#123;</span><br><span class="line">      el.<span class="title function_">focus</span>()</span><br><span class="line">      <span class="comment">// binding.value   指令的值</span></span><br><span class="line">      <span class="comment">// binding.arg     指令的参数</span></span><br><span class="line">      <span class="comment">// binding.modifiers 修饰符</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="全部指令汇总"><a href="#全部指令汇总" class="headerlink" title="全部指令汇总"></a>全部指令汇总</h2><table>
+<thead>
+<tr>
+<th>指令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>v-text</code></td>
+<td>渲染纯文本</td>
+</tr>
+<tr>
+<td><code>v-html</code></td>
+<td>渲染 HTML</td>
+</tr>
+<tr>
+<td><code>v-show</code></td>
+<td>CSS 显示隐藏</td>
+</tr>
+<tr>
+<td><code>v-if</code></td>
+<td>条件渲染（添加移除）</td>
+</tr>
+<tr>
+<td><code>v-else</code> &#x2F; <code>v-else-if</code></td>
+<td>条件分支</td>
+</tr>
+<tr>
+<td><code>v-for</code></td>
+<td>循环渲染</td>
+</tr>
+<tr>
+<td><code>v-on</code></td>
+<td>事件绑定</td>
+</tr>
+<tr>
+<td><code>v-bind</code></td>
+<td>属性绑定</td>
+</tr>
+<tr>
+<td><code>v-model</code></td>
+<td>双向绑定</td>
+</tr>
+<tr>
+<td><code>v-slot</code></td>
+<td>具名插槽</td>
+</tr>
+<tr>
+<td><code>v-pre</code></td>
+<td>跳过编译</td>
+</tr>
+<tr>
+<td><code>v-once</code></td>
+<td>只渲染一次</td>
+</tr>
+<tr>
+<td><code>v-memo</code></td>
+<td>依赖变化才重渲染</td>
+</tr>
+<tr>
+<td><code>v-cloak</code></td>
+<td>未编译时隐藏</td>
+</tr>
+</tbody></table>
+<h2 id="动态组件"><a href="#动态组件" class="headerlink" title="动态组件"></a>动态组件</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">&quot;comName&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>配合 <code>is</code> 属性实现组件动态切换，值为组件名称。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Mr Jia
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://your-domain.com/posts/25731/" title="Vue3 基础教程（选项式 API）">https://your-domain.com/posts/25731/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fas fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/" rel="tag"><i class="fa fa-tag"></i> 前端框架</a>
+              <a href="/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 基础教程</a>
+              <a href="/tags/Vue3/" rel="tag"><i class="fa fa-tag"></i> Vue3</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/60417/" rel="prev" title="Vue3 + Vant 移动端项目搭建">
+                  <i class="fa fa-angle-left"></i> Vue3 + Vant 移动端项目搭建
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/65232/" rel="next" title="Webpack 5 完整配置指南">
+                  Webpack 5 完整配置指南 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2024 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fas fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Mr Jia</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fas fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fas fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
+
+
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL2p6bDAw" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+
+<div class="page-loader" id="pageLoader">
+  <div class="loader-content">
+    <div class="loader-spinner"></div>
+    <div class="loader-text">LOADING</div>
+  </div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  // ========================================
+  // 页面加载完成后隐藏加载动画
+  // ========================================
+  function hidePageLoader() {
+    const loader = document.getElementById('pageLoader');
+    if (loader) {
+      loader.style.opacity = '0';
+      loader.style.visibility = 'hidden';
+      setTimeout(function() {
+        loader.remove();
+      }, 500);
+    }
+  }
+  
+  if (document.readyState === 'complete') {
+    setTimeout(hidePageLoader, 100);
+  } else {
+    window.addEventListener('load', function() {
+      setTimeout(hidePageLoader, 300);
+    });
+    // 兜底：3秒后强制隐藏
+    setTimeout(hidePageLoader, 3000);
+  }
+
+  // ========================================
+  // 鼠标点击特效 - 爱心爆炸
+  // ========================================
+  const colors = ['#6366f1', '#ec4899', '#10b981', '#f59e0b', '#3b82f6', '#ef4444'];
+  
+  function createClickEffect(x, y) {
+    const count = 8;
+    for (let i = 0; i < count; i++) {
+      const particle = document.createElement('div');
+      const angle = (Math.PI * 2 * i) / count;
+      const velocity = 3 + Math.random() * 3;
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      
+      particle.style.cssText = `
+        position: fixed;
+        left: ${x}px;
+        top: ${y}px;
+        width: 8px;
+        height: 8px;
+        background: ${color};
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 99999;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 6px ${color};
+      `;
+      
+      document.body.appendChild(particle);
+      
+      let vx = Math.cos(angle) * velocity;
+      let vy = Math.sin(angle) * velocity;
+      let opacity = 1;
+      let scale = 1;
+      
+      function animate() {
+        x += vx;
+        y += vy;
+        vy += 0.1; // 重力
+        opacity -= 0.02;
+        scale -= 0.01;
+        
+        if (opacity <= 0) {
+          particle.remove();
+          return;
+        }
+        
+        particle.style.left = x + 'px';
+        particle.style.top = y + 'px';
+        particle.style.opacity = opacity;
+        particle.style.transform = `translate(-50%, -50%) scale(${Math.max(0, scale)})`;
+        
+        requestAnimationFrame(animate);
+      }
+      
+      requestAnimationFrame(animate);
+    }
+  }
+
+  document.addEventListener('click', function(e) {
+    // 避免在按钮、链接等交互元素上触发太多粒子
+    if (e.target.closest('a, button, input, textarea, .search-popup, .copy-btn')) return;
+    createClickEffect(e.clientX, e.clientY);
+  });
+
+  // ========================================
+  // 标题动态切换效果
+  // ========================================
+  const originalTitle = document.title;
+  const titleMessages = [
+    { title: '👋 欢迎回来！', timeout: 2000 },
+    { title: originalTitle, timeout: 0 }
+  ];
+  
+  let titleIndex = 0;
+  let titleTimer = null;
+
+  document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+      clearTimeout(titleTimer);
+      document.title = '💔 等等我呀~';
+    } else {
+      document.title = '🎉 欢迎回来！';
+      titleTimer = setTimeout(function() {
+        document.title = originalTitle;
+      }, 2000);
+    }
+  });
+
+  // ========================================
+  // 平滑滚动增强
+  // ========================================
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === '#' || href.length <= 1) return;
+      
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        const headerOffset = 80;
+        const elementPosition = target.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  // ========================================
+  // 图片懒加载占位符效果
+  // ========================================
+  if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.classList.add('img-loaded');
+          imageObserver.unobserve(img);
+        }
+      });
+    }, {
+      rootMargin: '50px 0px'
+    });
+
+    document.querySelectorAll('img').forEach(function(img) {
+      imageObserver.observe(img);
+    });
+  }
+
+  // ========================================
+  // 滚动显示动画
+  // ========================================
+  setTimeout(function() {
+    document.querySelectorAll('.post').forEach(function(post, index) {
+      post.style.opacity = '1';
+      post.style.transform = 'translateY(0)';
+      post.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+    });
+  }, 100);
+
+  // ========================================
+  // 代码块复制成功提示增强
+  // ========================================
+  const originalCopy = document.querySelector('.copy-btn');
+  if (originalCopy) {
+    const style = document.createElement('style');
+    style.textContent = `
+      .copy-btn.copied {
+        background: #10b981 !important;
+        color: white !important;
+      }
+      .copy-btn.copied::after {
+        content: '已复制!';
+        position: absolute;
+        right: 100%;
+        margin-right: 8px;
+        padding: 4px 8px;
+        background: #10b981;
+        color: white;
+        border-radius: 4px;
+        font-size: 12px;
+        white-space: nowrap;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  // ========================================
+  // 阅读进度条增强
+  // ========================================
+  function updateReadingProgress() {
+    const progressBar = document.querySelector('.reading-progress-bar');
+    if (!progressBar) return;
+    
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = window.scrollY;
+    const progress = Math.max(0, Math.min(100, (scrolled / docHeight) * 100));
+    
+    progressBar.style.width = progress + '%';
+  }
+
+  window.addEventListener('scroll', updateReadingProgress, { passive: true });
+  updateReadingProgress();
+
+  // ========================================
+  // 导航栏滚动效果
+  // ========================================
+  let lastScroll = 0;
+  const header = document.querySelector('.header-inner');
+  
+  window.addEventListener('scroll', function() {
+    const currentScroll = window.scrollY;
+    
+    if (header) {
+      if (currentScroll > 100) {
+        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
+      } else {
+        header.style.boxShadow = 'none';
+      }
+    }
+    
+    lastScroll = currentScroll;
+  }, { passive: true });
+
+  // ========================================
+  // 暗黑模式切换按钮增强
+  // ========================================
+  const darkmodeToggle = document.querySelector('.darkmode-toggle');
+  if (darkmodeToggle) {
+    darkmodeToggle.addEventListener('click', function() {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      
+      // 添加切换动画
+      document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
+      setTimeout(function() {
+        document.body.style.transition = '';
+      }, 300);
+    });
+  }
+
+  // ========================================
+  // 控制台彩蛋
+  // ========================================
+  console.log('%c 🚀 Mr Jia\'s Blog ', 'background: linear-gradient(135deg, #6366f1, #ec4899); color: white; font-size: 20px; font-weight: bold; padding: 10px 20px; border-radius: 8px; margin: 20px 0;');
+  console.log('%c 欢迎来到我的技术博客！', 'color: #6366f1; font-size: 14px; font-weight: 500;');
+  console.log('%c 如果你对代码感兴趣，欢迎访问我的 GitHub: https://github.com/jzl00', 'color: #6b7280; font-size: 12px;');
+
+  // ========================================
+  // Pjax 页面切换后重新初始化
+  // ========================================
+  document.addEventListener('pjax:success', function() {
+    // 重新绑定事件
+    document.querySelectorAll('.post').forEach(function(post, index) {
+      post.style.opacity = '0';
+      post.style.transform = 'translateY(30px)';
+      post.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+      setTimeout(function() {
+        post.style.opacity = '1';
+        post.style.transform = 'translateY(0)';
+      }, 50);
+    });
+    
+    updateReadingProgress();
+  });
+
+})();
+</script>
+
+
+<script>
+(function() {
+  'use strict';
+  
+  // 检测是否为移动设备，移动端不启用
+  if ('ontouchstart' in window || navigator.maxTouchPoints > 0) return;
+  
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  canvas.style.cssText = 'position:fixed;top:0;left:0;pointer-events:none;z-index:9998;';
+  document.body.appendChild(canvas);
+  
+  let width = canvas.width = window.innerWidth;
+  let height = canvas.height = window.innerHeight;
+  let particles = [];
+  let mouseX = 0;
+  let mouseY = 0;
+  
+  window.addEventListener('resize', function() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  });
+  
+  document.addEventListener('mousemove', function(e) {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    
+    for (let i = 0; i < 2; i++) {
+      particles.push({
+        x: mouseX,
+        y: mouseY,
+        vx: (Math.random() - 0.5) * 2,
+        vy: (Math.random() - 0.5) * 2,
+        life: 1,
+        size: Math.random() * 3 + 1,
+        color: Math.random() > 0.5 ? '#6366f1' : '#ec4899'
+      });
+    }
+  });
+  
+  function animate() {
+    ctx.clearRect(0, 0, width, height);
+    
+    particles = particles.filter(function(p) {
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= 0.02;
+      p.size *= 0.98;
+      
+      if (p.life <= 0) return false;
+      
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.globalAlpha = p.life * 0.6;
+      ctx.fill();
+      
+      return true;
+    });
+    
+    requestAnimationFrame(animate);
+  }
+  
+  animate();
+})();
+</script>
+
+
+<style>
+  img {
+    transition: opacity 0.4s ease, transform 0.3s ease;
+  }
+  img:not(.img-loaded) {
+    opacity: 0;
+  }
+  img.img-loaded {
+    opacity: 1;
+  }
+  
+  /* 选中文字美化 */
+  ::selection {
+    background: rgba(99, 102, 241, 0.2);
+    color: #4f46e5;
+  }
+  
+  /* 工具提示样式 */
+  [data-tooltip] {
+    position: relative;
+  }
+  [data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 12px;
+    background: #1f2937;
+    color: white;
+    font-size: 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+    z-index: 1000;
+    margin-bottom: 8px;
+  }
+</style>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/Epsilon2.1.model.json"},"display":{"position":"right","width":140,"height":280,"hOffset":20,"vOffset":20},"mobile":{"show":false},"react":{"opacity":0.8}});</script></body>
+</html>
